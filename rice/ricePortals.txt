@@ -1,0 +1,36 @@
+45 90 180 Eng,           29720726,-95399935
+Abercrombie Relief,      29720565,-95399387
+Baker College,           29717118,-95398851
+Berlin Wall,             29716463,-95402161
+Brown College,           29721310,-95396311
+Brown Obelisk,           29721395,-95395866
+Bull and Bear,           29717214,-95402954
+Cohen Sundial,           29718166,-95397222
+Color Fount,             29717002,-95402889
+Duncan Hall,             29720309,-95398612
+Edgar Lovett,            29719484,-95399880
+Fondren Library,         29717866,-95399566
+J Sayles Court,          29718954,-95402464
+James Skyspace,          29716426,-95404416
+Lovett Gears,            29716279,-95397863
+Michael Heiz 180,        29720260,-95399810
+Michael Heiz 45,         29720500,-95399986
+Michael Heiz 90,         29720542,-95399703
+Milus Garden,            29718219,-95401031
+Mirror,                  29717340,-95401078
+Parque Tezontle,         29716719,-95401870
+Rice Owl (Car),          29720833,-95401369
+Rice Owl (Stad),         29715010,-95408712
+Rice South Plant,        29714067,-95399533
+Rice Stadium,            29716181,-95407931
+Rice Univ (Sally),       29719011,-95397881
+Rice Univ Art Gallery,   29718384,-95397644
+Rice Univ Entrance,      29720714,-95394243
+Rice Univ Physics Quad,  29719449,-95401455
+Rice Univ Post,          29713853,-95407226
+Rice Warrior,            29715865,-95400263
+Statue of Willy Rice,    29718600,-95398929
+The Bent Tau,            29720831,-95399599
+The Sisters,             29721481,-95396537
+W Edwin Plaza,           29718114,-95403280
+Zipcar,                  29715848,-95397779
