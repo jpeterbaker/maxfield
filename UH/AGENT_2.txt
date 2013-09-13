@@ -1,0 +1,73 @@
+AGENT 2 (travels 2972 m)
+	3:
+		Quad Art
+		Tube Tree
+	6:
+		Quad Art
+		Red Crane
+	9:
+		Quad Art
+		Albertus
+	14:
+		Half Spheres
+		Quad Art
+	17:
+		Half Spheres
+		Sofu Teshighara
+	21:
+		Half Spheres
+		Healing Nature
+	28:
+		Winged Victory
+		Pond Art
+	30:
+		Winged Victory
+		Blaffer
+	32:
+		Winged Victory
+		Violin Player
+	33:
+		Winged Victory
+		Orpheus
+	38:
+		Blaffer
+		Architecture Roof
+	42:
+		Troika
+		Winged Victory
+	43:
+		Troika
+		Blaffer
+	44:
+		Troika
+		Architecture Roof
+	45:
+		Troika
+		UH Walking Giants
+	47:
+		Troika
+		Albertus
+	54:
+		UH Baseball Chairs
+		Half Spheres
+	74:
+		Cube Geysers
+		Bronze Cougars
+	75:
+		Cube Geysers
+		Lynn Plaza
+	76:
+		Cube Geysers
+		Waterfall
+	78:
+		Cube Geysers
+		Spikey Flag
+	80:
+		Cube Geysers
+		Four Lies
+	89:
+		Colourful Serpentine
+		Sandy
+	93:
+		Anne Plaza
+		Colourful Serpentine

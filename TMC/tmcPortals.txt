@@ -1,0 +1,39 @@
+A Good Physician,       29712629,-95396512
+Autry House,            29716095,-95396982
+BCM Fount 2,            29709917,-95395356
+Baylor Col Fount,       29710798,-95396821
+Daughters Of TX,        29712446,-95393657
+Denton Cooley,          29707264,-95400419
+Dick Dowling,           29711983,-95393457
+Emergence,              29705586,-95398154
+Flame,                  29706466,-95396753
+Flipperboy,             29709722,-95400275
+George H Hermann,       29715198,-95395719
+HCC Zen,                29703763,-95405402
+Hermann Hosp Orig,      29714449,-95395941
+Houston Zoo Elephant,   29712183,-95393027
+Hummingbird,            29707466,-95399444
+Jones Jessie Lib,       29711898,-95396809
+LeRoy Melcher Fount,    29706535,-95396088
+Lesa A. Nelson,         29705554,-95396385
+MD Anderson Fount,      29706014,-95399355
+Magne Garden,           29708444,-95402959
+Michael DeBakey,        29711693,-95396483
+Michael E. DeBakey Lib, 29711649,-95396188
+Prairie Wildlife,       29705554,-95401664
+Pranath Yama,           29711871,-95396066
+Prometheus,             29708911,-95394812
+Red Oak,                29704538,-95397682
+Richard JV Johnson,     29706483,-95400286
+Steer at UTHSC,         29703041,-95404548
+TMC Transit,            29703687,-95403560
+The Bathers,            29711881,-95398824
+The Garden Club,        29710210,-95398046
+Tree of Flames,         29704612,-95397293
+UTSPH Lib,              29704977,-95398074
+Water Nymph,            29705398,-95398060
+Waterslide Cafe,        29709679,-95397527
+Wave of Life,           29704794,-95401957
+Woman with Dove,        29712484,-95396377
+Wortham Fount in TMC,   29705999,-95399620
+Wortham Gate,           29715054,-95396330

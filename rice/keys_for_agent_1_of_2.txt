@@ -1,0 +1,31 @@
+Keys for Agent 1 of 2
+
+45 90 180 Eng              2
+Abercrombie Relief         1
+Berlin Wall                1
+Brown College              3
+Brown Obelisk              2
+Bull and Bear              2
+Cohen Sundial              2
+Color Fount                1
+Duncan Hall                1
+Edgar Lovett               2
+Fondren Library            2
+J Sayles Court             1
+Lovett Gears               1
+Michael Heiz 180           4
+Michael Heiz 45            1
+Michael Heiz 90            3
+Milus Garden               1
+Parque Tezontle            1
+Rice Owl (Car)             1
+Rice Stadium               3
+Rice Univ Art Gallery      2
+Rice Univ Entrance         1
+Rice Univ Post             5
+Rice Warrior               1
+Statue of Willy Rice       1
+The Bent Tau               2
+The Sisters                2
+W Edwin Plaza              1
+Zipcar                     1

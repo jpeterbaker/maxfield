@@ -151,11 +151,13 @@ else:
     with open(input_file,'r') as fin:
         a = pickle.load(fin)
 
+print 'so far so good'
+
 PP = PlanPrinter.PlanPrinter(a,output_directory,nagents)
-#PP.keyPrep()
-#PP.agentKeys()
-#PP.planMap()
-#PP.agentLinks()
+PP.keyPrep()
+PP.agentKeys()
+PP.planMap()
+PP.agentLinks()
 #PP.animate()
-PP.instruct()
+#PP.instruct()
 

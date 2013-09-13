@@ -1,0 +1,511 @@
+Complete link schedule issued to agent 1 of 3
+Total distance: 3461 m
+
+Link  0
+Agent 1
+		Armadillo Weather
+		Have Fun
+Link  1
+	Agent 2    
+		Have Fun
+		MS Always Fresh
+Link  2
+	Agent 3    
+		MS Always Fresh
+		Armadillo Weather
+Link  3
+	Agent 2    
+		MS Northeast Fount
+		Armadillo Weather
+Link  4
+	Agent 2    
+		MS Northeast Fount
+		Have Fun
+Link  5
+	Agent 2    
+		Baker Weather
+		Armadillo Weather
+Link  6
+	Agent 3    
+		MS Always Fresh
+		Baker Weather
+Link  7
+	Agent 2    
+		Baker Weather
+		Have Fun
+Link  8
+Agent 1
+		Baker Weather
+		MS Northeast Fount
+Link  9
+	Agent 3    
+		Rive Row Boat
+		Woodlands Pavillion
+Link  10
+Agent 1
+		Woodlands Pavillion
+		Baker Weather
+Link  11
+	Agent 3    
+		Rive Row Boat
+		Baker Weather
+Link  12
+	Agent 2    
+		Tribute to George
+		Woodlands Pavillion
+Link  13
+Agent 1
+		Tribute to George
+		Rive Row Boat
+Link  14
+	Agent 2    
+		Tribute to Cynthia
+		Woodlands Pavillion
+Link  15
+Agent 1
+		Tribute to Cynthia
+		Baker Weather
+Link  16
+	Agent 2    
+		MS Rooster Weather
+		Baker Weather
+Link  17
+Agent 1
+		MS Rooster Weather
+		Tribute to Cynthia
+Link  18
+	Agent 2    
+		MS Spirit Cols
+		Baker Weather
+Link  19
+Agent 1
+		Woodlands Pavillion
+		MS Spirit Cols
+Link  20
+	Agent 2    
+		MS Spirit Cols
+		Tribute to Cynthia
+Link  21
+	Agent 2    
+		MS Spirit Cols
+		MS Rooster Weather
+Link  22
+	Agent 2    
+		Six Pines Fount
+		Baker Weather
+Link  23
+	Agent 2    
+		Six Pines Fount
+		Rive Row Boat
+Link  24
+	Agent 2    
+		Six Pines Fount
+		Woodlands Pavillion
+Link  25
+	Agent 2    
+		Six Pines Fount
+		Tribute to George
+Link  26
+	Agent 2    
+		Six Pines Fount
+		MS Spirit Cols
+Link  27
+Agent 1
+		Smokedance 3
+		Six Pines Fount
+Link  28
+	Agent 3    
+		Millennium Sculpt
+		Smokedance 3
+Link  29
+	Agent 3    
+		Millennium Sculpt
+		Six Pines Fount
+Link  30
+Agent 1
+		South Gate
+		Millennium Sculpt
+Link  31
+Agent 1
+		South Gate
+		Smokedance 3
+Link  32
+	Agent 3    
+		Smokedance
+		Millennium Sculpt
+Link  33
+Agent 1
+		Smokedance
+		South Gate
+Link  34
+	Agent 3    
+		Millennium Sculpt
+		Rive Row Boat
+Link  35
+Agent 1
+		Rive Row Boat
+		Smokedance 3
+Link  36
+Agent 1
+		Rive Row Boat
+		South Gate
+Link  37
+Agent 1
+		Rive Row Boat
+		Smokedance
+Link  38
+	Agent 2    
+		Storybook
+		Town Green NORTH
+Link  39
+	Agent 2    
+		Town Green NORTH
+		MS Fresh Dlvry
+Link  40
+	Agent 3    
+		MS Fresh Dlvry
+		Storybook
+Link  41
+	Agent 2    
+		Ice Cream Weather
+		MS Fresh Dlvry
+Link  42
+Agent 1
+		Storybook
+		Ice Cream Weather
+Link  43
+	Agent 2    
+		Ice Cream Weather
+		Town Green NORTH
+Link  44
+	Agent 3    
+		MS Fresh Dlvry
+		MS Always Fresh
+Link  45
+Agent 1
+		Storybook
+		MS Always Fresh
+Link  46
+	Agent 3    
+		MS Always Fresh
+		Ice Cream Weather
+Link  47
+	Agent 2    
+		Thomas Markle
+		Storybook
+Link  48
+	Agent 2    
+		Thomas Markle
+		MS Always Fresh
+Link  49
+	Agent 2    
+		Thomas Markle
+		MS Fresh Dlvry
+Link  50
+Agent 1
+		Cascading Falls
+		The Cat Roost Mouse
+Link  51
+	Agent 3    
+		The Cat Roost Mouse
+		Storybook
+Link  52
+Agent 1
+		Cascading Falls
+		Storybook
+Link  53
+Agent 1
+		Cascading Falls
+		MS Always Fresh
+Link  54
+	Agent 2    
+		MS Always Fresh
+		The Cat Roost Mouse
+Link  55
+	Agent 3    
+		The Tortoise+Ducks
+		Storybook
+Link  56
+	Agent 3    
+		The Tortoise+Ducks
+		Thomas Markle
+Link  57
+	Agent 3    
+		With Hope NORTH
+		The Tortoise+Ducks
+Link  58
+	Agent 3    
+		With Hope NORTH
+		Thomas Markle
+Link  59
+Agent 1
+		The Mermaid Woodcutter
+		The Tortoise+Ducks
+Link  60
+Agent 1
+		The Mermaid Woodcutter
+		With Hope NORTH
+Link  61
+Agent 1
+		Riva Row Park
+		Thomas Markle
+Link  62
+Agent 1
+		Riva Row Park
+		MS Always Fresh
+Link  63
+Agent 1
+		Riva Row Park
+		Storybook
+Link  64
+Agent 1
+		Riva Row Park
+		Cascading Falls
+Link  65
+Agent 1
+		Riva Row Park
+		The Tortoise+Ducks
+Link  66
+Agent 1
+		Riva Row Park
+		With Hope NORTH
+Link  67
+Agent 1
+		Riva Row Park
+		The Mermaid Woodcutter
+Link  68
+	Agent 2    
+		MS East Fount
+		Riva Row Park
+Link  69
+	Agent 3    
+		Texas Marines Medal
+		MS East Fount
+Link  70
+	Agent 3    
+		Texas Marines Medal
+		Riva Row Park
+Link  71
+	Agent 3    
+		USMC Medal
+		Riva Row Park
+Link  72
+	Agent 3    
+		USMC Medal
+		Texas Marines Medal
+Link  73
+	Agent 2    
+		Jamba Juice MS
+		MS Gap Clock
+Link  74
+	Agent 2    
+		MS Gap Clock
+		Car Weather
+Link  75
+	Agent 2    
+		Car Weather
+		Jamba Juice MS
+Link  76
+	Agent 3    
+		Entrance to Lair
+		Car Weather
+Link  77
+	Agent 3    
+		Entrance to Lair
+		MS Gap Clock
+Link  78
+	Agent 2    
+		Car Weather
+		Texas Marines Medal
+Link  79
+	Agent 2    
+		Jamba Juice MS
+		Texas Marines Medal
+Link  80
+Agent 1
+		Texas Marines Medal
+		MS Gap Clock
+Link  81
+Agent 1
+		Texas Marines Medal
+		Entrance to Lair
+Link  82
+	Agent 3    
+		Fountain MS
+		Jamba Juice MS
+Link  83
+	Agent 3    
+		Fountain MS
+		Texas Marines Medal
+Link  84
+	Agent 3    
+		Fountain MS
+		Car Weather
+Link  85
+	Agent 2    
+		MS East Fount
+		Jamba Juice MS
+Link  86
+	Agent 2    
+		MS East Fount
+		Fountain MS
+Link  87
+	Agent 3    
+		MS Cycling
+		MS East Fount
+Link  88
+	Agent 3    
+		MS Cycling
+		Jamba Juice MS
+Link  89
+	Agent 2    
+		MS East Fount
+		Thomas Markle
+Link  90
+	Agent 3    
+		Thomas Markle
+		Texas Marines Medal
+Link  91
+	Agent 3    
+		Thomas Markle
+		USMC Medal
+Link  92
+Agent 1
+		Thomas Markle
+		Jamba Juice MS
+Link  93
+Agent 1
+		Thomas Markle
+		MS Cycling
+Link  94
+	Agent 2    
+		Tiffany's Clock
+		Riva Row Park
+Link  95
+	Agent 2    
+		Tiffany's Clock
+		MS East Fount
+Link  96
+	Agent 3    
+		MS Pig in Barrel
+		Thomas Markle
+Link  97
+	Agent 3    
+		MS Happy Ants
+		MS Pig in Barrel
+Link  98
+Agent 1
+		MS Happy Ants
+		Thomas Markle
+Link  99
+	Agent 3    
+		MS Hey Look
+		Thomas Markle
+Link  100
+Agent 1
+		MS Pig in Barrel
+		MS Hey Look
+Link  101
+	Agent 2    
+		White Birch
+		MS Hey Look
+Link  102
+	Agent 2    
+		White Birch
+		MS Pig in Barrel
+Link  103
+Agent 1
+		MS Happy Ants
+		MS Always Fresh
+Link  104
+	Agent 3    
+		MS Always Fresh
+		MS Pig in Barrel
+Link  105
+	Agent 3    
+		MS Always Fresh
+		MS Hey Look
+Link  106
+	Agent 3    
+		MS Always Fresh
+		White Birch
+Link  107
+Agent 1
+		Baker Weather
+		Riva Row Park
+Link  108
+Agent 1
+		Baker Weather
+		Thomas Markle
+Link  109
+Agent 1
+		Baker Weather
+		MS East Fount
+Link  110
+Agent 1
+		Baker Weather
+		Tiffany's Clock
+Link  111
+Agent 1
+		Baker Weather
+		MS Happy Ants
+Link  112
+	Agent 2    
+		Rabbit Weather
+		South Region Lib
+Link  113
+	Agent 3    
+		South Region Lib
+		Riva Row Park
+Link  114
+	Agent 2    
+		Rabbit Weather
+		Riva Row Park
+Link  115
+	Agent 3    
+		South Montgom CC
+		Rabbit Weather
+Link  116
+	Agent 3    
+		South Montgom CC
+		Riva Row Park
+Link  117
+	Agent 3    
+		South Montgom CC
+		South Region Lib
+Link  118
+	Agent 2    
+		Rabbit Weather
+		MS Always Fresh
+Link  119
+	Agent 2    
+		MS Always Fresh
+		South Montgom CC
+Link  120
+	Agent 3    
+		With Hope SOUTH
+		Baker Weather
+Link  121
+	Agent 3    
+		With Hope SOUTH
+		Riva Row Park
+Link  122
+	Agent 3    
+		Town Green SOUTH
+		Baker Weather
+Link  123
+Agent 1
+		Town Green SOUTH
+		With Hope SOUTH
+Link  124
+	Agent 3    
+		Rive Row Boat
+		Riva Row Park
+Link  125
+Agent 1
+		Rive Row Boat
+		With Hope SOUTH
+Link  126
+Agent 1
+		Rive Row Boat
+		Town Green SOUTH

@@ -1,0 +1,73 @@
+AGENT 0 (travels 2910 m)
+	0:
+		Gourds
+		Tau Beta
+	2:
+		Gourds
+		Quad Art
+	4:
+		Gourds
+		Tube Tree
+	7:
+		Gourds
+		Red Crane
+	10:
+		Gourds
+		Albertus
+	13:
+		Gourds
+		Half Spheres
+	22:
+		Healing Nature
+		Gourds
+	23:
+		Healing Nature
+		Sofu Teshighara
+	46:
+		Pond Art
+		UH Walking Giants
+	52:
+		Redtub
+		Albertus
+	53:
+		Redtub
+		Cultural Reach
+	59:
+		AA
+		Welcome Center
+	62:
+		AA
+		Bronze Cougars
+	63:
+		Bronze Cougars
+		UH Seal
+	65:
+		Bronze Cougars
+		Sandy
+	68:
+		Bronze Cougars
+		Hilton Twist
+	70:
+		Bronze Cougars
+		Lynn Plaza
+	71:
+		Lynn Plaza
+		Hilton Twist
+	77:
+		Waterfall
+		Sandy
+	84:
+		Sandy
+		Shapeless Triangle
+	90:
+		Cheyenne
+		Sandy
+	91:
+		Sandy
+		Anne Plaza
+	96:
+		Sandy
+		Healing Nature
+	101:
+		Half Spheres
+		Sandy

@@ -1,0 +1,406 @@
+102 links
+97 fields
+152863 APs
+2808 MUs
+4 agents
+
+
+7:24PM
+ExodusReturn linked The Gourds (4700 Calhoun Road, University of Houston, Houston, TX) to UH Tau Beta Pi (3401 Cullen Boulevard, University of Houston, Houston, TX)
+7:27PM
+Babamots linked UH Tau Beta Pi (3401 Cullen Boulevard, University of Houston, Houston, TX) to UH Quad Art (University Park, University of Houston, Houston, TX)
+7:28PM
+ExodusReturn created a Control Field @The Gourds (4700 Calhoun Road, University of Houston, Houston, TX) +7 MUs
+7:28PM
+ExodusReturn linked The Gourds (4700 Calhoun Road, University of Houston, Houston, TX) to UH Quad Art (University Park, University of Houston, Houston, TX)
+7:29PM
+LoQ138 linked UH Quad Art (University Park, University of Houston, Houston, TX) to UH Tube Tree (3401 Cullen Boulevard, Houston, TX 77004, USA)
+7:30PM
+ExodusReturn created a Control Field @The Gourds (4700 Calhoun Road, University of Houston, Houston, TX) +17 MUs
+7:30PM
+ExodusReturn linked The Gourds (4700 Calhoun Road, University of Houston, Houston, TX) to UH Tube Tree (3401 Cullen Boulevard, Houston, TX 77004, USA)
+7:31PM
+Babamots linked UH Tube Tree (3401 Cullen Boulevard, Houston, TX 77004, USA) to UH Tau Beta Pi (3401 Cullen Boulevard, University of Houston, Houston, TX)
+7:31PM
+Babamots created a Control Field @UH Tube Tree (3401 Cullen Boulevard, Houston, TX 77004, USA) +7 MUs
+7:31PM
+Babamots created a Control Field @UH Tube Tree (3401 Cullen Boulevard, Houston, TX 77004, USA) +3 MUs
+7:32PM
+LoQ138 linked UH Quad Art (University Park, University of Houston, Houston, TX) to UH Red Crane (3501 Cullen Boulevard, Houston, TX 77004, USA)
+7:33PM
+ExodusReturn linked The Gourds (4700 Calhoun Road, University of Houston, Houston, TX) to UH Red Crane (3501 Cullen Boulevard, Houston, TX 77004, USA)
+7:33PM
+ExodusReturn created a Control Field @The Gourds (4700 Calhoun Road, University of Houston, Houston, TX) +25 MUs
+7:34PM
+gulliver linked UH Red Crane (3501 Cullen Boulevard, Houston, TX 77004, USA) to UH Tube Tree (3401 Cullen Boulevard, Houston, TX 77004, USA)
+7:34PM
+gulliver created a Control Field @UH Red Crane (3501 Cullen Boulevard, Houston, TX 77004, USA) +2 MUs
+7:34PM
+gulliver created a Control Field @UH Red Crane (3501 Cullen Boulevard, Houston, TX 77004, USA) +5 MUs
+7:35PM
+LoQ138 linked UH Quad Art (University Park, University of Houston, Houston, TX) to Albertus Magnus (4711 Calhoun Road, Houston, TX 77004, USA)
+7:37PM
+ExodusReturn created a Control Field @The Gourds (4700 Calhoun Road, University of Houston, Houston, TX) +56 MUs
+7:37PM
+ExodusReturn linked The Gourds (4700 Calhoun Road, University of Houston, Houston, TX) to Albertus Magnus (4711 Calhoun Road, Houston, TX 77004, USA)
+7:38PM
+gulliver created a Control Field @Albertus Magnus (4711 Calhoun Road, Houston, TX 77004, USA) +17 MUs
+7:38PM
+gulliver created a Control Field @Albertus Magnus (4711 Calhoun Road, Houston, TX 77004, USA) +7 MUs
+7:38PM
+gulliver linked Albertus Magnus (4711 Calhoun Road, Houston, TX 77004, USA) to UH Red Crane (3501 Cullen Boulevard, Houston, TX 77004, USA)
+7:39PM
+gulliver linked Albertus Magnus (4711 Calhoun Road, Houston, TX 77004, USA) to Half Spheres (3413-3549 Cullen Boulevard, Houston, TX)
+7:40PM
+ExodusReturn linked The Gourds (4700 Calhoun Road, University of Houston, Houston, TX) to Half Spheres (3413-3549 Cullen Boulevard, Houston, TX)
+7:40PM
+ExodusReturn created a Control Field @The Gourds (4700 Calhoun Road, University of Houston, Houston, TX) +86 MUs
+7:42PM
+LoQ138 created a Control Field @Half Spheres (3413-3549 Cullen Boulevard, Houston, TX) +21 MUs
+7:42PM
+LoQ138 linked Half Spheres (3413-3549 Cullen Boulevard, Houston, TX) to UH Quad Art (University Park, University of Houston, Houston, TX)
+7:42PM
+LoQ138 created a Control Field @Half Spheres (3413-3549 Cullen Boulevard, Houston, TX) +9 MUs
+7:43PM
+Babamots linked UH Art (University Park, Houston, TX 77004, USA) to Half Spheres (3413-3549 Cullen Boulevard, Houston, TX)
+7:44PM
+Babamots linked UH Art (University Park, Houston, TX 77004, USA) to The Gourds (4700 Calhoun Road, University of Houston, Houston, TX)
+7:44PM
+Babamots created a Control Field @UH Art (University Park, Houston, TX 77004, USA) +13 MUs
+7:46PM
+LoQ138 linked Half Spheres (3413-3549 Cullen Boulevard, Houston, TX) to UH Sofu Teshighara (University Park, Houston, TX 77004, USA)
+7:46PM
+Babamots created a Control Field @UH Sofu Teshighara (University Park, Houston, TX 77004, USA) +30 MUs
+7:46PM
+Babamots linked UH Sofu Teshighara (University Park, Houston, TX 77004, USA) to The Gourds (4700 Calhoun Road, University of Houston, Houston, TX)
+7:47PM
+Babamots created a Control Field @UH Sofu Teshighara (University Park, Houston, TX 77004, USA) +15 MUs
+7:47PM
+Babamots linked UH Sofu Teshighara (University Park, Houston, TX 77004, USA) to UH Art (University Park, Houston, TX 77004, USA)
+7:47PM
+Babamots created a Control Field @UH Sofu Teshighara (University Park, Houston, TX 77004, USA) +2 MUs
+7:48PM
+gulliver linked Albertus Magnus (4711 Calhoun Road, Houston, TX 77004, USA) to Healing Nature, 2003 (University Dr @ Calhoun Rd, University of Houston, Houston, TX)
+7:50PM
+LoQ138 linked Half Spheres (3413-3549 Cullen Boulevard, Houston, TX) to Healing Nature, 2003 (University Dr @ Calhoun Rd, University of Houston, Houston, TX)
+7:50PM
+LoQ138 created a Control Field @Half Spheres (3413-3549 Cullen Boulevard, Houston, TX) +246 MUs
+7:51PM
+ExodusReturn linked Healing Nature, 2003 (University Dr @ Calhoun Rd, University of Houston, Houston, TX) to The Gourds (4700 Calhoun Road, University of Houston, Houston, TX)
+7:51PM
+ExodusReturn created a Control Field @Healing Nature, 2003 (University Dr @ Calhoun Rd, University of Houston, Houston, TX) +2 MUs
+7:51PM
+ExodusReturn created a Control Field @Healing Nature, 2003 (University Dr @ Calhoun Rd, University of Houston, Houston, TX) +157 MUs
+7:51PM
+ExodusReturn created a Control Field @Healing Nature, 2003 (University Dr @ Calhoun Rd, University of Houston, Houston, TX) +14 MUs
+7:51PM
+ExodusReturn linked Healing Nature, 2003 (University Dr @ Calhoun Rd, University of Houston, Houston, TX) to UH Sofu Teshighara (University Park, Houston, TX 77004, USA)
+7:51PM
+ExodusReturn created a Control Field @Healing Nature, 2003 (University Dr @ Calhoun Rd, University of Houston, Houston, TX) +113 MUs
+7:53PM
+LoQ138 linked UH Baseball Chairs (4052-4098 Elgin Street, Houston, TX 77204, USA) to Art on Campus (4141-4153 Elgin St, University Center, University of Houston, Houston, TX)
+7:55PM
+gulliver linked Albertus Magnus (4711 Calhoun Road, Houston, TX 77004, USA) to Art on Campus (4141-4153 Elgin St, University Center, University of Houston, Houston, TX)
+7:55PM
+gulliver created a Control Field @Albertus Magnus (4711 Calhoun Road, Houston, TX 77004, USA) +68 MUs
+7:55PM
+gulliver linked Albertus Magnus (4711 Calhoun Road, Houston, TX 77004, USA) to UH Baseball Chairs (4052-4098 Elgin Street, Houston, TX 77204, USA)
+7:56PM
+LoQ138 linked UH Baseball Chairs (4052-4098 Elgin Street, Houston, TX 77204, USA) to Winged Victory - Moores Opera (3255 Cullen Boulevard, University of Houston, Houston, TX)
+7:58PM
+LoQ138 linked Winged Victory - Moores Opera (3255 Cullen Boulevard, University of Houston, Houston, TX) to Pond Art (3501 Cullen Boulevard, University of Houston, Houston, TX)
+7:59PM
+LoQ138 created a Control Field @UH Baseball Chairs (4052-4098 Elgin Street, Houston, TX 77204, USA) +31 MUs
+7:59PM
+LoQ138 linked UH Baseball Chairs (4052-4098 Elgin Street, Houston, TX 77204, USA) to Pond Art (3501 Cullen Boulevard, University of Houston, Houston, TX)
+8:00PM
+LoQ138 linked Winged Victory - Moores Opera (3255 Cullen Boulevard, University of Houston, Houston, TX) to Blaffer Art Museum (University of Houston, 120 Fine Arts Bldg, Houston, TX 77204-4018, United States)
+8:02PM
+Babamots linked Blaffer Art Museum (University of Houston, 120 Fine Arts Bldg, Houston, TX 77204-4018, United States) to UH Violin Player Statue (3401 Cullen Boulevard, Houston, TX 77004, USA)
+8:02PM
+LoQ138 linked Winged Victory - Moores Opera (3255 Cullen Boulevard, University of Houston, Houston, TX) to UH Violin Player Statue (3401 Cullen Boulevard, Houston, TX 77004, USA)
+8:02PM
+LoQ138 created a Control Field @Winged Victory - Moores Opera (3255 Cullen Boulevard, University of Houston, Houston, TX) +3 MUs
+8:03PM
+LoQ138 linked Winged Victory - Moores Opera (3255 Cullen Boulevard, University of Houston, Houston, TX) to Orpheus (3401 Cullen Boulevard, Houston, TX 77004, USA)
+8:04PM
+Babamots linked UH Violin Player Statue (3401 Cullen Boulevard, Houston, TX 77004, USA) to Orpheus (3401 Cullen Boulevard, Houston, TX 77004, USA)
+8:04PM
+Babamots created a Control Field @UH Violin Player Statue (3401 Cullen Boulevard, Houston, TX 77004, USA) +1 MUs
+8:05PM
+Babamots created a Control Field @Blaffer Art Museum (University of Houston, 120 Fine Arts Bldg, Houston, TX 77204-4018, United States) +7 MUs
+8:05PM
+Babamots linked Blaffer Art Museum (University of Houston, 120 Fine Arts Bldg, Houston, TX 77204-4018, United States) to Pond Art (3501 Cullen Boulevard, University of Houston, Houston, TX)
+8:07PM
+gulliver created a Control Field @Pond Art (3501 Cullen Boulevard, University of Houston, Houston, TX) +1 MUs
+8:07PM
+gulliver created a Control Field @Pond Art (3501 Cullen Boulevard, University of Houston, Houston, TX) +5 MUs
+8:07PM
+gulliver linked Pond Art (3501 Cullen Boulevard, University of Houston, Houston, TX) to UH Violin Player Statue (3401 Cullen Boulevard, Houston, TX 77004, USA)
+8:07PM
+gulliver linked Pond Art (3501 Cullen Boulevard, University of Houston, Houston, TX) to Orpheus (3401 Cullen Boulevard, Houston, TX 77004, USA)
+8:07PM
+gulliver created a Control Field @Pond Art (3501 Cullen Boulevard, University of Houston, Houston, TX) +4 MUs
+8:07PM
+gulliver created a Control Field @Pond Art (3501 Cullen Boulevard, University of Houston, Houston, TX) +1 MUs
+8:08PM
+LoQ138 linked Blaffer Art Museum (University of Houston, 120 Fine Arts Bldg, Houston, TX 77204-4018, United States) to UH Architecture Roof (3401 Cullen Boulevard, Houston, TX 77004, USA)
+8:09PM
+Babamots linked UH Architecture Roof (3401 Cullen Boulevard, Houston, TX 77004, USA) to Pond Art (3501 Cullen Boulevard, University of Houston, Houston, TX)
+8:09PM
+Babamots created a Control Field @UH Architecture Roof (3401 Cullen Boulevard, Houston, TX 77004, USA) +6 MUs
+8:10PM
+gulliver linked Pond Art (3501 Cullen Boulevard, University of Houston, Houston, TX) to Troika, 1978 (3413-3549 Cullen Boulevard, University of Houston, Houston, TX)
+8:11PM
+LoQ138 created a Control Field @UH Baseball Chairs (4052-4098 Elgin Street, Houston, TX 77204, USA) +93 MUs
+8:11PM
+LoQ138 linked UH Baseball Chairs (4052-4098 Elgin Street, Houston, TX 77204, USA) to Troika, 1978 (3413-3549 Cullen Boulevard, University of Houston, Houston, TX)
+8:13PM
+LoQ138 created a Control Field @Troika, 1978 (3413-3549 Cullen Boulevard, University of Houston, Houston, TX) +20 MUs
+8:13PM
+LoQ138 created a Control Field @Troika, 1978 (3413-3549 Cullen Boulevard, University of Houston, Houston, TX) +46 MUs
+8:13PM
+LoQ138 linked Troika, 1978 (3413-3549 Cullen Boulevard, University of Houston, Houston, TX) to Winged Victory - Moores Opera (3255 Cullen Boulevard, University of Houston, Houston, TX)
+8:14PM
+LoQ138 created a Control Field @Troika, 1978 (3413-3549 Cullen Boulevard, University of Houston, Houston, TX) +27 MUs
+8:14PM
+LoQ138 created a Control Field @Troika, 1978 (3413-3549 Cullen Boulevard, University of Houston, Houston, TX) +18 MUs
+8:14PM
+LoQ138 linked Troika, 1978 (3413-3549 Cullen Boulevard, University of Houston, Houston, TX) to Blaffer Art Museum (University of Houston, 120 Fine Arts Bldg, Houston, TX 77204-4018, United States)
+8:14PM
+LoQ138 linked Troika, 1978 (3413-3549 Cullen Boulevard, University of Houston, Houston, TX) to UH Architecture Roof (3401 Cullen Boulevard, Houston, TX 77004, USA)
+8:14PM
+LoQ138 created a Control Field @Troika, 1978 (3413-3549 Cullen Boulevard, University of Houston, Houston, TX) +3 MUs
+8:14PM
+LoQ138 created a Control Field @Troika, 1978 (3413-3549 Cullen Boulevard, University of Houston, Houston, TX) +13 MUs
+8:15PM
+LoQ138 linked Troika, 1978 (3413-3549 Cullen Boulevard, University of Houston, Houston, TX) to UH Walking Giants (3401 Cullen Boulevard, University of Houston, Houston, TX)
+8:16PM
+ExodusReturn created a Control Field @Pond Art (3501 Cullen Boulevard, University of Houston, Houston, TX) +2 MUs
+8:16PM
+ExodusReturn linked Pond Art (3501 Cullen Boulevard, University of Houston, Houston, TX) to UH Walking Giants (3401 Cullen Boulevard, University of Houston, Houston, TX)
+8:18PM
+LoQ138 linked Troika, 1978 (3413-3549 Cullen Boulevard, University of Houston, Houston, TX) to Albertus Magnus (4711 Calhoun Road, Houston, TX 77004, USA)
+8:18PM
+LoQ138 created a Control Field @Troika, 1978 (3413-3549 Cullen Boulevard, University of Houston, Houston, TX) +142 MUs
+8:19PM
+gulliver linked Albertus Magnus (4711 Calhoun Road, Houston, TX 77004, USA) to Pond Art (3501 Cullen Boulevard, University of Houston, Houston, TX)
+8:19PM
+gulliver created a Control Field @Albertus Magnus (4711 Calhoun Road, Houston, TX 77004, USA) +24 MUs
+8:19PM
+gulliver created a Control Field @Albertus Magnus (4711 Calhoun Road, Houston, TX 77004, USA) +25 MUs
+8:19PM
+gulliver created a Control Field @Albertus Magnus (4711 Calhoun Road, Houston, TX 77004, USA) +9 MUs
+8:19PM
+gulliver created a Control Field @Albertus Magnus (4711 Calhoun Road, Houston, TX 77004, USA) +13 MUs
+8:19PM
+gulliver linked Albertus Magnus (4711 Calhoun Road, Houston, TX 77004, USA) to UH Walking Giants (3401 Cullen Boulevard, University of Houston, Houston, TX)
+8:20PM
+Babamots linked UH Cultural Reach (3413-3549 Cullen Boulevard, Houston, TX 77004, USA) to Troika, 1978 (3413-3549 Cullen Boulevard, University of Houston, Houston, TX)
+8:20PM
+Babamots created a Control Field @UH Cultural Reach (3413-3549 Cullen Boulevard, Houston, TX 77004, USA) +4 MUs
+8:20PM
+Babamots linked UH Cultural Reach (3413-3549 Cullen Boulevard, Houston, TX 77004, USA) to Albertus Magnus (4711 Calhoun Road, Houston, TX 77004, USA)
+8:24PM
+ExodusReturn linked Redtub (3401 Cullen Boulevard, University of Houston, Houston, TX) to Albertus Magnus (4711 Calhoun Road, Houston, TX 77004, USA)
+8:24PM
+ExodusReturn created a Control Field @Redtub (3401 Cullen Boulevard, University of Houston, Houston, TX) +3 MUs
+8:24PM
+ExodusReturn linked Redtub (3401 Cullen Boulevard, University of Houston, Houston, TX) to UH Cultural Reach (3413-3549 Cullen Boulevard, Houston, TX 77004, USA)
+8:25PM
+LoQ138 linked UH Baseball Chairs (4052-4098 Elgin Street, Houston, TX 77204, USA) to Half Spheres (3413-3549 Cullen Boulevard, Houston, TX)
+8:25PM
+LoQ138 created a Control Field @UH Baseball Chairs (4052-4098 Elgin Street, Houston, TX 77204, USA) +170 MUs
+8:26PM
+LoQ138 created a Control Field @Half Spheres (3413-3549 Cullen Boulevard, Houston, TX) +16 MUs
+8:26PM
+LoQ138 linked Half Spheres (3413-3549 Cullen Boulevard, Houston, TX) to Troika, 1978 (3413-3549 Cullen Boulevard, University of Houston, Houston, TX)
+8:26PM
+LoQ138 created a Control Field @Half Spheres (3413-3549 Cullen Boulevard, Houston, TX) +16 MUs
+8:27PM
+LoQ138 created a Control Field @Half Spheres (3413-3549 Cullen Boulevard, Houston, TX) +3 MUs
+8:27PM
+LoQ138 linked Half Spheres (3413-3549 Cullen Boulevard, Houston, TX) to UH Cultural Reach (3413-3549 Cullen Boulevard, Houston, TX 77004, USA)
+8:27PM
+LoQ138 created a Control Field @Half Spheres (3413-3549 Cullen Boulevard, Houston, TX) +10 MUs
+8:27PM
+LoQ138 linked Half Spheres (3413-3549 Cullen Boulevard, Houston, TX) to Redtub (3401 Cullen Boulevard, University of Houston, Houston, TX)
+8:27PM
+LoQ138 created a Control Field @Half Spheres (3413-3549 Cullen Boulevard, Houston, TX) +2 MUs
+8:27PM
+LoQ138 created a Control Field @Half Spheres (3413-3549 Cullen Boulevard, Houston, TX) +6 MUs
+8:28PM
+Babamots linked University Of Houston Seal (University Drive, Houston, TX) to University Welcome Center (4800 Calhoun Road, Houston, TX 77004, United States)
+8:30PM
+ExodusReturn linked A,A by Jim Sanborn (4800 Calhoun Rd, University Center, University of Houston, Houston, TX) to University Welcome Center (4800 Calhoun Road, Houston, TX 77004, United States)
+8:31PM
+Babamots linked University Of Houston Seal (University Drive, Houston, TX) to A,A by Jim Sanborn (4800 Calhoun Rd, University Center, University of Houston, Houston, TX)
+8:31PM
+Babamots created a Control Field @University Of Houston Seal (University Drive, Houston, TX) +9 MUs
+8:33PM
+gulliver linked University Welcome Center (4800 Calhoun Road, Houston, TX 77004, United States) to Bronze Cougars (Greater Third Ward, Houston, TX, USA)
+8:34PM
+ExodusReturn linked A,A by Jim Sanborn (4800 Calhoun Rd, University Center, University of Houston, Houston, TX) to Bronze Cougars (Greater Third Ward, Houston, TX, USA)
+8:34PM
+ExodusReturn created a Control Field @A,A by Jim Sanborn (4800 Calhoun Rd, University Center, University of Houston, Houston, TX) +24 MUs
+8:36PM
+ExodusReturn linked Bronze Cougars (Greater Third Ward, Houston, TX, USA) to University Of Houston Seal (University Drive, Houston, TX)
+8:36PM
+ExodusReturn created a Control Field @Bronze Cougars (Greater Third Ward, Houston, TX, USA) +13 MUs
+8:36PM
+ExodusReturn created a Control Field @Bronze Cougars (Greater Third Ward, Houston, TX, USA) +4 MUs
+8:37PM
+gulliver linked University Welcome Center (4800 Calhoun Road, Houston, TX 77004, United States) to Sandy in Defined Space, 1967 (Greater Third Ward, Houston, TX, USA)
+8:38PM
+ExodusReturn created a Control Field @Bronze Cougars (Greater Third Ward, Houston, TX, USA) +55 MUs
+8:38PM
+ExodusReturn linked Bronze Cougars (Greater Third Ward, Houston, TX, USA) to Sandy in Defined Space, 1967 (Greater Third Ward, Houston, TX, USA)
+8:40PM
+ExodusReturn created a Control Field @Sandy in Defined Space, 1967 (Greater Third Ward, Houston, TX, USA) +26 MUs
+8:40PM
+ExodusReturn linked Sandy in Defined Space, 1967 (Greater Third Ward, Houston, TX, USA) to A,A by Jim Sanborn (4800 Calhoun Rd, University Center, University of Houston, Houston, TX)
+8:40PM
+ExodusReturn created a Control Field @Sandy in Defined Space, 1967 (Greater Third Ward, Houston, TX, USA) +11 MUs
+8:41PM
+gulliver linked University Welcome Center (4800 Calhoun Road, Houston, TX 77004, United States) to The Hilton Twist (4400 University Drive, Houston, TX)
+8:43PM
+ExodusReturn created a Control Field @Bronze Cougars (Greater Third Ward, Houston, TX, USA) +1 MUs
+8:43PM
+ExodusReturn linked Bronze Cougars (Greater Third Ward, Houston, TX, USA) to The Hilton Twist (4400 University Drive, Houston, TX)
+8:45PM
+Babamots linked University Welcome Center (4800 Calhoun Road, Houston, TX 77004, United States) to Lynn Eusan Memorial Park (Greater Third Ward, Houston, TX, USA)
+8:46PM
+ExodusReturn created a Control Field @Bronze Cougars (Greater Third Ward, Houston, TX, USA) +20 MUs
+8:46PM
+ExodusReturn linked Bronze Cougars (Greater Third Ward, Houston, TX, USA) to Lynn Eusan Memorial Park (Greater Third Ward, Houston, TX, USA)
+8:47PM
+ExodusReturn linked Lynn Eusan Memorial Park (Greater Third Ward, Houston, TX, USA) to The Hilton Twist (4400 University Drive, Houston, TX)
+8:47PM
+ExodusReturn created a Control Field @Lynn Eusan Memorial Park (Greater Third Ward, Houston, TX, USA) +13 MUs
+8:47PM
+ExodusReturn created a Control Field @Lynn Eusan Memorial Park (Greater Third Ward, Houston, TX, USA) +8 MUs
+8:48PM
+Babamots linked University Welcome Center (4800 Calhoun Road, Houston, TX 77004, United States) to Cube Geysers (3800 Cullen Boulevard, Houston, TX 77004, USA)
+8:53PM
+ExodusReturn linked Sandy in Defined Space, 1967 (Greater Third Ward, Houston, TX, USA) to Cube Geysers (3800 Cullen Boulevard, Houston, TX 77004, USA)
+8:53PM
+ExodusReturn created a Control Field @Sandy in Defined Space, 1967 (Greater Third Ward, Houston, TX, USA) +92 MUs
+8:53PM
+LoQ138 created a Control Field @Cube Geysers (3800 Cullen Boulevard, Houston, TX 77004, USA) +32 MUs
+8:53PM
+LoQ138 linked Cube Geysers (3800 Cullen Boulevard, Houston, TX 77004, USA) to Bronze Cougars (Greater Third Ward, Houston, TX, USA)
+8:53PM
+LoQ138 created a Control Field @Cube Geysers (3800 Cullen Boulevard, Houston, TX 77004, USA) +6 MUs
+8:54PM
+LoQ138 linked Cube Geysers (3800 Cullen Boulevard, Houston, TX 77004, USA) to Lynn Eusan Memorial Park (Greater Third Ward, Houston, TX, USA)
+8:54PM
+LoQ138 created a Control Field @Cube Geysers (3800 Cullen Boulevard, Houston, TX 77004, USA) +11 MUs
+8:54PM
+LoQ138 created a Control Field @Cube Geysers (3800 Cullen Boulevard, Houston, TX 77004, USA) +3 MUs
+8:54PM
+LoQ138 linked Cube Geysers (3800 Cullen Boulevard, Houston, TX 77004, USA) to Waterfall, Stele and River, 19 (University Park, University of Houston, Houston, TX)
+8:55PM
+ExodusReturn linked Waterfall, Stele and River, 19 (University Park, University of Houston, Houston, TX) to Sandy in Defined Space, 1967 (Greater Third Ward, Houston, TX, USA)
+8:55PM
+ExodusReturn created a Control Field @Waterfall, Stele and River, 19 (University Park, University of Houston, Houston, TX) +8 MUs
+8:56PM
+LoQ138 linked Cube Geysers (3800 Cullen Boulevard, Houston, TX 77004, USA) to Spiky American Flag (Greater Third Ward, Houston, TX, USA)
+8:56PM
+gulliver linked Spiky American Flag (Greater Third Ward, Houston, TX, USA) to The Statute of Four Lies (4401 Wheeler Avenue, Moody Towers Residence Halls, Houston, TX 77004, USA)
+8:57PM
+LoQ138 created a Control Field @Cube Geysers (3800 Cullen Boulevard, Houston, TX 77004, USA) +8 MUs
+8:57PM
+LoQ138 linked Cube Geysers (3800 Cullen Boulevard, Houston, TX 77004, USA) to The Statute of Four Lies (4401 Wheeler Avenue, Moody Towers Residence Halls, Houston, TX 77004, USA)
+8:58PM
+Babamots created a Control Field @The Statute of Four Lies (4401 Wheeler Avenue, Moody Towers Residence Halls, Houston, TX 77004, USA) +24 MUs
+8:58PM
+Babamots linked The Statute of Four Lies (4401 Wheeler Avenue, Moody Towers Residence Halls, Houston, TX 77004, USA) to University Welcome Center (4800 Calhoun Road, Houston, TX 77004, United States)
+9:02PM
+gulliver created a Control Field @University Welcome Center (4800 Calhoun Road, Houston, TX 77004, United States) +2 MUs
+9:02PM
+gulliver linked University Welcome Center (4800 Calhoun Road, Houston, TX 77004, United States) to Spiky American Flag (Greater Third Ward, Houston, TX, USA)
+9:02PM
+gulliver created a Control Field @University Welcome Center (4800 Calhoun Road, Houston, TX 77004, United States) +15 MUs
+9:07PM
+gulliver linked University Welcome Center (4800 Calhoun Road, Houston, TX 77004, United States) to Shapeless Triangle (Wheeler St @ Rockwood Dr, Houston, TX)
+9:08PM
+ExodusReturn created a Control Field @Sandy in Defined Space, 1967 (Greater Third Ward, Houston, TX, USA) +145 MUs
+9:08PM
+ExodusReturn linked Sandy in Defined Space, 1967 (Greater Third Ward, Houston, TX, USA) to Shapeless Triangle (Wheeler St @ Rockwood Dr, Houston, TX)
+9:13PM
+gulliver linked Shapeless Triangle (Wheeler St @ Rockwood Dr, Houston, TX) to Cube Geysers (3800 Cullen Boulevard, Houston, TX 77004, USA)
+9:13PM
+gulliver created a Control Field @Shapeless Triangle (Wheeler St @ Rockwood Dr, Houston, TX) +38 MUs
+9:13PM
+gulliver created a Control Field @Shapeless Triangle (Wheeler St @ Rockwood Dr, Houston, TX) +20 MUs
+9:14PM
+gulliver created a Control Field @Shapeless Triangle (Wheeler St @ Rockwood Dr, Houston, TX) +1 MUs
+9:14PM
+gulliver created a Control Field @Shapeless Triangle (Wheeler St @ Rockwood Dr, Houston, TX) +11 MUs
+9:14PM
+gulliver linked Shapeless Triangle (Wheeler St @ Rockwood Dr, Houston, TX) to Waterfall, Stele and River, 19 (University Park, University of Houston, Houston, TX)
+9:14PM
+gulliver created a Control Field @Shapeless Triangle (Wheeler St @ Rockwood Dr, Houston, TX) +1 MUs
+9:14PM
+gulliver created a Control Field @Shapeless Triangle (Wheeler St @ Rockwood Dr, Houston, TX) +18 MUs
+9:14PM
+gulliver linked Shapeless Triangle (Wheeler St @ Rockwood Dr, Houston, TX) to The Statute of Four Lies (4401 Wheeler Avenue, Moody Towers Residence Halls, Houston, TX 77004, USA)
+9:15PM
+Babamots linked University Welcome Center (4800 Calhoun Road, Houston, TX 77004, United States) to Colourful Serpentine (4400 University Drive, Houston, TX 77204, USA)
+9:16PM
+LoQ138 created a Control Field @Colourful Serpentine (4400 University Drive, Houston, TX 77204, USA) +1 MUs
+9:16PM
+LoQ138 linked Colourful Serpentine (4400 University Drive, Houston, TX 77204, USA) to Sandy in Defined Space, 1967 (Greater Third Ward, Houston, TX, USA)
+9:17PM
+ExodusReturn linked Tower of the Cheyenne (University Park, University Center, University of Houston, Houston, TX) to Sandy in Defined Space, 1967 (Greater Third Ward, Houston, TX, USA)
+9:19PM
+ExodusReturn linked Sandy in Defined Space, 1967 (Greater Third Ward, Houston, TX, USA) to Anne Garrett Butler Plaza (University Park, Houston, TX)
+9:22PM
+LoQ138 created a Control Field @Tower of the Cheyenne (University Park, University Center, University of Houston, Houston, TX) +1 MUs
+9:22PM
+LoQ138 linked Tower of the Cheyenne (University Park, University Center, University of Houston, Houston, TX) to Anne Garrett Butler Plaza (University Park, Houston, TX)
+9:23PM
+LoQ138 created a Control Field @Anne Garrett Butler Plaza (University Park, Houston, TX) +2 MUs
+9:23PM
+LoQ138 linked Anne Garrett Butler Plaza (University Park, Houston, TX) to Colourful Serpentine (4400 University Drive, Houston, TX 77204, USA)
+9:23PM
+Babamots created a Control Field @Colourful Serpentine (4400 University Drive, Houston, TX 77204, USA) +1 MUs
+9:23PM
+Babamots created a Control Field @Colourful Serpentine (4400 University Drive, Houston, TX 77204, USA) +1 MUs
+9:23PM
+Babamots linked Colourful Serpentine (4400 University Drive, Houston, TX 77204, USA) to Tower of the Cheyenne (University Park, University Center, University of Houston, Houston, TX)
+9:25PM
+gulliver linked Shapeless Triangle (Wheeler St @ Rockwood Dr, Houston, TX) to Healing Nature, 2003 (University Dr @ Calhoun Rd, University of Houston, Houston, TX)
+9:26PM
+ExodusReturn linked Sandy in Defined Space, 1967 (Greater Third Ward, Houston, TX, USA) to Healing Nature, 2003 (University Dr @ Calhoun Rd, University of Houston, Houston, TX)
+9:26PM
+ExodusReturn created a Control Field @Sandy in Defined Space, 1967 (Greater Third Ward, Houston, TX, USA) +182 MUs
+9:27PM
+Babamots created a Control Field @Healing Nature, 2003 (University Dr @ Calhoun Rd, University of Houston, Houston, TX) +9 MUs
+9:27PM
+Babamots linked Healing Nature, 2003 (University Dr @ Calhoun Rd, University of Houston, Houston, TX) to University Welcome Center (4800 Calhoun Road, Houston, TX 77004, United States)
+9:27PM
+Babamots created a Control Field @Healing Nature, 2003 (University Dr @ Calhoun Rd, University of Houston, Houston, TX) +27 MUs
+9:27PM
+Babamots created a Control Field @Healing Nature, 2003 (University Dr @ Calhoun Rd, University of Houston, Houston, TX) +25 MUs
+9:27PM
+Babamots linked Healing Nature, 2003 (University Dr @ Calhoun Rd, University of Houston, Houston, TX) to Colourful Serpentine (4400 University Drive, Houston, TX 77204, USA)
+9:27PM
+Babamots created a Control Field @Healing Nature, 2003 (University Dr @ Calhoun Rd, University of Houston, Houston, TX) +1 MUs
+9:27PM
+Babamots created a Control Field @Healing Nature, 2003 (University Dr @ Calhoun Rd, University of Houston, Houston, TX) +8 MUs
+9:27PM
+Babamots created a Control Field @Healing Nature, 2003 (University Dr @ Calhoun Rd, University of Houston, Houston, TX) +16 MUs
+9:27PM
+Babamots linked Healing Nature, 2003 (University Dr @ Calhoun Rd, University of Houston, Houston, TX) to Anne Garrett Butler Plaza (University Park, Houston, TX)
+9:28PM
+gulliver created a Control Field @Shapeless Triangle (Wheeler St @ Rockwood Dr, Houston, TX) +220 MUs
+9:28PM
+gulliver linked Shapeless Triangle (Wheeler St @ Rockwood Dr, Houston, TX) to Half Spheres (3413-3549 Cullen Boulevard, Houston, TX)
+9:30PM
+ExodusReturn created a Control Field @Half Spheres (3413-3549 Cullen Boulevard, Houston, TX) +2 MUs
+9:30PM
+ExodusReturn linked Half Spheres (3413-3549 Cullen Boulevard, Houston, TX) to Sandy in Defined Space, 1967 (Greater Third Ward, Houston, TX, USA)
+9:30PM
+ExodusReturn created a Control Field @Half Spheres (3413-3549 Cullen Boulevard, Houston, TX) +47 MUs
+

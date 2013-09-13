@@ -1,0 +1,47 @@
+Portal                    Keys Needed	    Keys Lacked
+Armadillo Weather                   3	              3
+Baker Weather                       9	              9
+Car Weather                         3	              3
+Cascading Falls                     1	              1
+Entrance to Lair                    1	              1
+Fountain MS                         1	              1
+Have Fun                            3	              3
+Ice Cream Weather                   2	              2
+Jamba Juice MS                      5	              5
+MS Always Fresh                     8	              8
+MS Cycling                          1	              1
+MS East Fount                       4	              4
+MS Fresh Dlvry                      3	              3
+MS Gap Clock                        3	              3
+MS Happy Ants                       1	              1
+MS Hey Look                         3	              3
+MS Northeast Fount                  1	              1
+MS Pig in Barrel                    3	              3
+MS Rooster Weather                  1	              1
+MS Spirit Cols                      2	              2
+Millennium Sculpt                   2	              2
+Rabbit Weather                      1	              1
+Riva Row Park                      10	             10
+Rive Row Boat                       3	              3
+Six Pines Fount                     2	              2
+Smokedance                          1	              1
+Smokedance 3                        3	              3
+South Gate                          2	              2
+South Montgom CC                    1	              1
+South Region Lib                    2	              2
+Storybook                           6	              6
+Texas Marines Medal                 5	              5
+The Cat Roost Mouse                 2	              2
+The Mermaid Woodcutter              1	              1
+The Tortoise+Ducks                  3	              3
+Thomas Markle                       8	              8
+Tiffany's Clock                     1	              1
+Town Green NORTH                    2	              2
+Town Green SOUTH                    1	              1
+Tribute to Cynthia                  2	              2
+Tribute to George                   1	              1
+USMC Medal                          1	              1
+White Birch                         1	              1
+With Hope NORTH                     2	              2
+With Hope SOUTH                     2	              2
+Woodlands Pavillion                 4	              4

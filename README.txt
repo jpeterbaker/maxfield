@@ -13,7 +13,7 @@
 
     I'll be distributing this code with a file EXAMPLE.txt. Try running this
 
-        >> python makePlan.py 4 EXAMPLE.txt output.pkl out
+        >> python makePlan.py 4 EXAMPLE.txt out output.pkl
 
     This will put files int the "out/" directory explaining the link plan. I think these are reasonably self-explanatory if you just look at them.
 

@@ -1,0 +1,388 @@
+Complete link schedule issued to agent 1 of 2
+Total distance  : 7968 m
+Total experience: 70650 AP
+
+0 makes 0 fields
+__1 gets 313 AP
+    Rice Univ Entrance
+    Brown Obelisk
+1 makes 0 fields
+  2 gets 313 AP
+    Brown Obelisk
+    Statue of Willy Rice
+2 makes 1 fields
+  2 gets 1563 AP
+    Statue of Willy Rice
+    Rice Univ Entrance
+3 makes 0 fields
+__1 gets 313 AP
+    Rice Univ (Sally)
+    Statue of Willy Rice
+4 makes 1 fields
+__1 gets 1563 AP
+    Rice Univ (Sally)
+    Rice Univ Entrance
+5 makes 0 fields
+  2 gets 313 AP
+    Parque Tezontle
+    Brown Obelisk
+6 makes 1 fields
+__1 gets 1563 AP
+    Rice Univ Entrance
+    Parque Tezontle
+7 makes 2 fields
+  2 gets 2813 AP
+    Parque Tezontle
+    Statue of Willy Rice
+8 makes 2 fields
+  2 gets 2813 AP
+    Parque Tezontle
+    Rice Univ (Sally)
+9 makes 0 fields
+  2 gets 313 AP
+    Mirror
+    Brown Obelisk
+10 makes 1 fields
+  2 gets 1563 AP
+    Mirror
+    Parque Tezontle
+11 makes 0 fields
+  2 gets 313 AP
+    Rice Univ Post
+    Brown Obelisk
+12 makes 1 fields
+  2 gets 1563 AP
+    Rice Univ Post
+    Rice Univ Entrance
+13 makes 2 fields
+  2 gets 2813 AP
+    Rice Univ Post
+    Parque Tezontle
+14 makes 2 fields
+  2 gets 2813 AP
+    Rice Univ Post
+    Mirror
+15 makes 0 fields
+__1 gets 313 AP
+    Duncan Hall
+    Brown Obelisk
+16 makes 0 fields
+__1 gets 313 AP
+    Duncan Hall
+    Brown College
+17 makes 1 fields
+__1 gets 1563 AP
+    Brown Obelisk
+    Brown College
+18 makes 0 fields
+__1 gets 313 AP
+    The Sisters
+    Duncan Hall
+19 makes 1 fields
+__1 gets 1563 AP
+    Brown Obelisk
+    The Sisters
+20 makes 2 fields
+__1 gets 2813 AP
+    The Sisters
+    Brown College
+21 makes 0 fields
+  2 gets 313 AP
+    Rice Stadium
+    The Sisters
+22 makes 1 fields
+  2 gets 1563 AP
+    Rice Stadium
+    Brown Obelisk
+23 makes 2 fields
+  2 gets 2813 AP
+    Rice Stadium
+    Duncan Hall
+24 makes 0 fields
+__1 gets 313 AP
+    The Bent Tau
+    45 90 180 Eng
+25 makes 0 fields
+  2 gets 313 AP
+    Rice Stadium
+    45 90 180 Eng
+26 makes 1 fields
+__1 gets 1563 AP
+    The Bent Tau
+    Rice Stadium
+27 makes 0 fields
+__1 gets 313 AP
+    The Bent Tau
+    Rice Owl (Car)
+28 makes 1 fields
+__1 gets 1563 AP
+    Rice Owl (Car)
+    Rice Stadium
+29 makes 2 fields
+__1 gets 2813 AP
+    Rice Owl (Car)
+    45 90 180 Eng
+30 makes 0 fields
+__1 gets 313 AP
+    Michael Heiz 45
+    The Bent Tau
+31 makes 0 fields
+__1 gets 313 AP
+    Michael Heiz 180
+    Michael Heiz 45
+32 makes 1 fields
+__1 gets 1563 AP
+    The Bent Tau
+    Michael Heiz 180
+33 makes 0 fields
+  2 gets 313 AP
+    Rice Univ Physics Quad
+    Michael Heiz 180
+34 makes 1 fields
+  2 gets 1563 AP
+    Rice Univ Physics Quad
+    Michael Heiz 45
+35 makes 0 fields
+__1 gets 313 AP
+    Michael Heiz 45
+    J Sayles Court
+36 makes 1 fields
+  2 gets 1563 AP
+    J Sayles Court
+    Rice Univ Physics Quad
+37 makes 1 fields
+__1 gets 1563 AP
+    Michael Heiz 180
+    Rice Stadium
+38 makes 2 fields
+  2 gets 2813 AP
+    Rice Stadium
+    Michael Heiz 45
+39 makes 2 fields
+  2 gets 2813 AP
+    Rice Stadium
+    Rice Univ Physics Quad
+40 makes 2 fields
+  2 gets 2813 AP
+    Rice Stadium
+    J Sayles Court
+41 makes 0 fields
+__1 gets 313 AP
+    The Bent Tau
+    Michael Heiz 90
+42 makes 1 fields
+__1 gets 1563 AP
+    Michael Heiz 90
+    Michael Heiz 180
+43 makes 0 fields
+__1 gets 313 AP
+    Abercrombie Relief
+    Michael Heiz 180
+44 makes 1 fields
+__1 gets 1563 AP
+    Abercrombie Relief
+    Michael Heiz 90
+45 makes 1 fields
+__1 gets 1563 AP
+    Rice Owl (Car)
+    The Sisters
+46 makes 2 fields
+__1 gets 2813 AP
+    The Sisters
+    The Bent Tau
+47 makes 2 fields
+__1 gets 2813 AP
+    The Sisters
+    Michael Heiz 180
+48 makes 2 fields
+__1 gets 2813 AP
+    The Sisters
+    Michael Heiz 90
+49 makes 2 fields
+__1 gets 2813 AP
+    The Sisters
+    Abercrombie Relief
+50 makes 0 fields
+  2 gets 313 AP
+    W Edwin Plaza
+    Bull and Bear
+51 makes 0 fields
+  2 gets 313 AP
+    W Edwin Plaza
+    Rice Stadium
+52 makes 1 fields
+  2 gets 1563 AP
+    Rice Stadium
+    Bull and Bear
+53 makes 0 fields
+__1 gets 313 AP
+    Edgar Lovett
+    Bull and Bear
+54 makes 1 fields
+__1 gets 1563 AP
+    W Edwin Plaza
+    Edgar Lovett
+55 makes 1 fields
+__1 gets 1563 AP
+    Brown Obelisk
+    Bull and Bear
+56 makes 2 fields
+__1 gets 2813 AP
+    Brown Obelisk
+    W Edwin Plaza
+57 makes 2 fields
+__1 gets 2813 AP
+    Brown Obelisk
+    Edgar Lovett
+58 makes 0 fields
+  2 gets 313 AP
+    James Skyspace
+    Rice Stadium
+59 makes 1 fields
+  2 gets 1563 AP
+    James Skyspace
+    Bull and Bear
+60 makes 0 fields
+__1 gets 313 AP
+    Brown Obelisk
+    Milus Garden
+61 makes 1 fields
+  2 gets 1563 AP
+    Milus Garden
+    Bull and Bear
+62 makes 0 fields
+__1 gets 313 AP
+    Brown Obelisk
+    Color Fount
+63 makes 1 fields
+  2 gets 1563 AP
+    Color Fount
+    Bull and Bear
+64 makes 2 fields
+  2 gets 2813 AP
+    Color Fount
+    Milus Garden
+65 makes 1 fields
+  2 gets 1563 AP
+    Rice Univ Post
+    Rice Stadium
+66 makes 2 fields
+  2 gets 2813 AP
+    Rice Univ Post
+    Bull and Bear
+67 makes 2 fields
+  2 gets 2813 AP
+    Rice Univ Post
+    James Skyspace
+68 makes 2 fields
+  2 gets 2813 AP
+    Rice Univ Post
+    Color Fount
+69 makes 0 fields
+  2 gets 313 AP
+    Rice Owl (Stad)
+    Rice Stadium
+70 makes 1 fields
+  2 gets 1563 AP
+    Rice Owl (Stad)
+    Rice Univ Post
+71 makes 0 fields
+__1 gets 313 AP
+    Fondren Library
+    Rice Univ Post
+72 makes 0 fields
+__1 gets 313 AP
+    Berlin Wall
+    Fondren Library
+73 makes 1 fields
+__1 gets 1563 AP
+    Berlin Wall
+    Rice Univ Post
+74 makes 1 fields
+__1 gets 1563 AP
+    Rice Univ Entrance
+    Berlin Wall
+75 makes 2 fields
+__1 gets 2813 AP
+    Rice Univ Entrance
+    Fondren Library
+76 makes 0 fields
+  2 gets 313 AP
+    Rice Univ Art Gallery
+    Rice Univ Entrance
+77 makes 1 fields
+  2 gets 1563 AP
+    Rice Univ Art Gallery
+    Rice Univ Post
+78 makes 2 fields
+  2 gets 2813 AP
+    Rice Univ Art Gallery
+    Berlin Wall
+79 makes 0 fields
+  2 gets 313 AP
+    Rice Warrior
+    Rice Univ Post
+80 makes 0 fields
+__1 gets 313 AP
+    Lovett Gears
+    Rice Warrior
+81 makes 1 fields
+__1 gets 1563 AP
+    Lovett Gears
+    Rice Univ Post
+82 makes 0 fields
+  2 gets 313 AP
+    Baker College
+    Lovett Gears
+83 makes 1 fields
+  2 gets 1563 AP
+    Baker College
+    Rice Univ Post
+84 makes 2 fields
+  2 gets 2813 AP
+    Baker College
+    Rice Warrior
+85 makes 1 fields
+__1 gets 1563 AP
+    Lovett Gears
+    Rice Univ Art Gallery
+86 makes 2 fields
+  2 gets 2813 AP
+    Rice Univ Art Gallery
+    Baker College
+87 makes 0 fields
+  2 gets 313 AP
+    Rice Univ Entrance
+    Cohen Sundial
+88 makes 1 fields
+__1 gets 1563 AP
+    Rice Univ Art Gallery
+    Cohen Sundial
+89 makes 0 fields
+  2 gets 313 AP
+    Rice Univ Entrance
+    Zipcar
+90 makes 1 fields
+__1 gets 1563 AP
+    Zipcar
+    Rice Univ Post
+91 makes 2 fields
+__1 gets 2813 AP
+    Zipcar
+    Rice Univ Art Gallery
+92 makes 2 fields
+__1 gets 2813 AP
+    Zipcar
+    Lovett Gears
+93 makes 2 fields
+__1 gets 2813 AP
+    Zipcar
+    Cohen Sundial
+94 makes 0 fields
+__1 gets 313 AP
+    Rice South Plant
+    Rice Univ Post
+95 makes 1 fields
+__1 gets 1563 AP
+    Rice South Plant
+    Zipcar
