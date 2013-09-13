@@ -1,0 +1,313 @@
+Complete link schedule issued to agent 3 of 3
+Total distance  : 3077 m
+Total experience: 52207 AP
+Links marked with * can be made EARLY
+
+Link  Agent Map# Link Origin
+                 Link Destination
+   0*     1   35 Healing Nature
+              12 Albertus
+
+   1*     1   35 Healing Nature
+              21 Gourds
+
+   2*     1   35 Healing Nature
+              15 Red Crane
+
+   3*     1   35 Healing Nature
+              16 Tube Tree
+
+   4* ____3   16 Tube Tree
+               5 Violin Player
+
+   5* ____3   16 Tube Tree
+               0 UH Baseball Chairs
+
+   6      1   35 Healing Nature
+               0 UH Baseball Chairs
+
+   7*     2    0 UH Baseball Chairs
+               6 Pond Art
+
+   8*     2    0 UH Baseball Chairs
+               4 Orpheus
+
+   9  ____3    4 Orpheus
+              16 Tube Tree
+
+  10  ____3    5 Violin Player
+               4 Orpheus
+
+  11  ____3    4 Orpheus
+               6 Pond Art
+
+  12  ____3   16 Tube Tree
+              15 Red Crane
+
+  13  ____3   15 Red Crane
+              21 Gourds
+
+  14      2    0 UH Baseball Chairs
+              12 Albertus
+
+  15*     1   12 Albertus
+               1 Art on Campus
+
+  16      1   12 Albertus
+              16 Tube Tree
+
+  17      1   12 Albertus
+               4 Orpheus
+
+  18      1   12 Albertus
+               5 Violin Player
+
+  19      1   12 Albertus
+               6 Pond Art
+
+  20      1   12 Albertus
+              15 Red Crane
+
+  21      1   12 Albertus
+              21 Gourds
+
+  22      2    0 UH Baseball Chairs
+               1 Art on Campus
+
+  23*     1   32 Colourful Serpentine
+              27 UH Seal
+
+  24*     1   32 Colourful Serpentine
+              36 Shapeless Triangle
+
+  25*     1   32 Colourful Serpentine
+              34 Four Lies
+
+  26* ____3   34 Four Lies
+              35 Healing Nature
+
+  27* ____3   34 Four Lies
+              33 Welcome Center
+
+  28      1   32 Colourful Serpentine
+              33 Welcome Center
+
+  29      1   32 Colourful Serpentine
+              35 Healing Nature
+
+  30      1   35 Healing Nature
+              33 Welcome Center
+
+  31      1   35 Healing Nature
+              36 Shapeless Triangle
+
+  32* ____3   36 Shapeless Triangle
+              13 Half Spheres
+
+  33* ____3   36 Shapeless Triangle
+              24 Waterfall
+
+  34* ____3   36 Shapeless Triangle
+              26 Bronze Cougars
+
+  35* ____3   36 Shapeless Triangle
+              28 Cube Geysers
+
+  36* ____3   36 Shapeless Triangle
+              25 AA
+
+  37* ____3   36 Shapeless Triangle
+              29 Lynn Plaza
+
+  38* ____3   36 Shapeless Triangle
+              31 Spikey Flag
+
+  39  ____3   36 Shapeless Triangle
+              34 Four Lies
+
+  40* ____3   31 Spikey Flag
+              30 Hilton Twist
+
+  41  ____3   31 Spikey Flag
+              32 Colourful Serpentine
+
+  42      2   30 Hilton Twist
+              32 Colourful Serpentine
+
+  43  ____3   31 Spikey Flag
+              27 UH Seal
+
+  44      2   27 UH Seal
+              30 Hilton Twist
+
+  45  ____3   31 Spikey Flag
+              29 Lynn Plaza
+
+  46      1   35 Healing Nature
+              25 AA
+
+  47  ____3   25 AA
+              32 Colourful Serpentine
+
+  48      2   25 AA
+              31 Spikey Flag
+
+  49  ____3   25 AA
+              27 UH Seal
+
+  50      2   25 AA
+              29 Lynn Plaza
+
+  51* ____3   23 Anne Plaza
+              22 Cheyenne
+
+  52* ____3   23 Anne Plaza
+              35 Healing Nature
+
+  53  ____3   25 AA
+              23 Anne Plaza
+
+  54      2   22 Cheyenne
+              25 AA
+
+  55*     2   19 Sandy
+              35 Healing Nature
+
+  56      1   25 AA
+              19 Sandy
+
+  57      2   19 Sandy
+              23 Anne Plaza
+
+  58      2   19 Sandy
+              22 Cheyenne
+
+  59  ____3   28 Cube Geysers
+              25 AA
+
+  60      1   25 AA
+              26 Bronze Cougars
+
+  61  ____3   26 Bronze Cougars
+              28 Cube Geysers
+
+  62      1   25 AA
+              24 Waterfall
+
+  63  ____3   24 Waterfall
+              26 Bronze Cougars
+
+  64      2   13 Half Spheres
+              35 Healing Nature
+
+  65      2   13 Half Spheres
+              25 AA
+
+  66      2   13 Half Spheres
+              19 Sandy
+
+  67      2   13 Half Spheres
+              24 Waterfall
+
+  68*     2    3 Blaffer
+               2 Winged Victory
+
+  69*     2    3 Blaffer
+              11 Redtub
+
+  70*     2    3 Blaffer
+              17 Tau Beta
+
+  71*     1   17 Tau Beta
+              35 Healing Nature
+
+  72      2    3 Blaffer
+              35 Healing Nature
+
+  73      1   11 Redtub
+              35 Healing Nature
+
+  74      1   11 Redtub
+              17 Tau Beta
+
+  75* ____3    7 Architecture Roof
+              11 Redtub
+
+  76  ____3    7 Architecture Roof
+               3 Blaffer
+
+  77      2    2 Winged Victory
+              35 Healing Nature
+
+  78      2    2 Winged Victory
+              11 Redtub
+
+  79      2    2 Winged Victory
+               7 Architecture Roof
+
+  80      2    0 UH Baseball Chairs
+               2 Winged Victory
+
+  81      2    0 UH Baseball Chairs
+               3 Blaffer
+
+  82*     1   14 Quad Art
+               9 Troika
+
+  83*     1   14 Quad Art
+              35 Healing Nature
+
+  84* ____3    9 Troika
+               8 UH Walking Giants
+
+  85  ____3    9 Troika
+              35 Healing Nature
+
+  86* ____3   10 Cultural Reach
+               9 Troika
+
+  87  ____3   10 Cultural Reach
+              14 Quad Art
+
+  88      1    8 UH Walking Giants
+              35 Healing Nature
+
+  89      1    8 UH Walking Giants
+              14 Quad Art
+
+  90      1    8 UH Walking Giants
+              10 Cultural Reach
+
+  91  ____3    9 Troika
+               2 Winged Victory
+
+  92      2    2 Winged Victory
+               8 UH Walking Giants
+
+  93*     1   20 Sofu Teshighara
+              18 UH Art
+
+  94*     1   20 Sofu Teshighara
+              35 Healing Nature
+
+  95      1   18 UH Art
+              35 Healing Nature
+
+  96      1   18 UH Art
+               9 Troika
+
+  97  ____3    9 Troika
+              20 Sofu Teshighara
+
+  98      2    0 UH Baseball Chairs
+              13 Half Spheres
+
+  99  ____3   13 Half Spheres
+               2 Winged Victory
+
+ 100  ____3   13 Half Spheres
+               9 Troika
+
+ 101  ____3   13 Half Spheres
+              18 UH Art
+

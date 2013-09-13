@@ -1,0 +1,38 @@
+Keys Needed | Lacked |
+          5 |      0 | AA
+          2 |      0 | Albertus
+          2 |      0 | Anne Plaza
+          1 |      0 | Architecture Roof
+          2 |      0 | Art on Campus
+          2 |      0 | Blaffer
+          3 |      0 | Bronze Cougars
+          2 |      0 | Cheyenne
+          3 |      0 | Colourful Serpentine
+          2 |      0 | Cube Geysers
+          1 |      0 | Cultural Reach
+          2 |      0 | Four Lies
+          3 |      0 | Gourds
+          2 |      0 | Half Spheres
+         14 |      1 | Healing Nature
+          2 |      0 | Hilton Twist
+          3 |      0 | Lynn Plaza
+          3 |      1 | Orpheus
+          3 |      0 | Pond Art
+          2 |      0 | Quad Art
+          3 |      0 | Red Crane
+          3 |      0 | Redtub
+          2 |      0 | Sandy
+          2 |      0 | Shapeless Triangle
+          1 |      1 | Sofu Teshighara
+          2 |      0 | Spikey Flag
+          2 |      0 | Tau Beta
+          4 |      0 | Troika
+          3 |      0 | Tube Tree
+          2 |      1 | UH Art
+          2 |      0 | UH Baseball Chairs
+          3 |      0 | UH Seal
+          2 |      0 | UH Walking Giants
+          2 |      0 | Violin Player
+          3 |      0 | Waterfall
+          3 |      0 | Welcome Center
+          4 |      0 | Winged Victory

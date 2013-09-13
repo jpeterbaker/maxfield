@@ -9,8 +9,7 @@ Some things are chosen randomly:
     Each triangle's "final node" (unless determined by parent)
 This is the number of times to randomly rebuild each first generation triangle while attempting to get it right
 '''
-
-TRIES = 10
+TRIES_PER_TRI = 10
 
 def canFlip(degrees,keylacks,p,q):
     '''
@@ -80,11 +79,16 @@ def flipSome(a):
 #            print 'Could not reduce IN-degree sufficiently for %s'%q
 
 
-def removeSince(a,m):
-    # Remove all but the first m edges from a
+def removeSince(a,m,t):
+    # Remove all but the first m edges from a (and .edge_stck)
+    # Remove all but the first t Triangules from a.triangulation
     for i in xrange(len(a.edgeStack) - m):
         p,q = a.edgeStack.pop()
         a.remove_edge(p,q)
+#        print 'removing',p,q
+#        print a.edgeStack
+    while len(a.triangulation) > t:
+        a.triangulation.pop()
 
 
 def triangulate(a,perim):
@@ -94,7 +98,7 @@ def triangulate(a,perim):
             makes a Triangle out of three perimeter portals
             for every feasible way of max-fielding that Triangle
                 try triangulating the two perimeter-polygons to the sides of the Triangle
-    
+
     Returns True if a feasible triangulation has been made in graph a
     '''
     pn = len(perim)
@@ -102,15 +106,20 @@ def triangulate(a,perim):
         return True
 
     try:
-        startlen = len(a.edgeStack)
+        startStackLen = len(a.edgeStack)
     except AttributeError:
-        startlen = 0
+        startStackLen = 0
         a.edgeStack = []
+    try:
+        startTriLen = len(a.triangulation)
+    except AttributeError:
+        startTriLen = 0
+        a.triangulation = []
 
     # Try all triangles using perim[0:2] and another perim node
     for i in np.random.permutation(range(2,pn)):
 
-        for j in xrange(TRIES):
+        for j in xrange(TRIES_PER_TRI):
             t0 = Triangle(perim[[0,1,i]],a,True)
             t0.findContents()
             t0.randSplit()
@@ -118,32 +127,31 @@ def triangulate(a,perim):
                 t0.buildGraph()
             except Deadend as d:
                 # remove the links formed since beginning of loop
-                removeSince(a,startlen)
+                removeSince(a,startStackLen,startTriLen)
             else:
                 # This build was successful. Break from the loop
                 break
         else:
-            # The loop ended "normally" so this triangle is no good
+            # The loop ended "normally" so this triangle failed
             continue
 
-        if not triangulate(a,perim[range(1,i   +1   )] ): # 1 through i
+        if not triangulate(a,perim[range(1,i   +1   )]): # 1 through i
             # remove the links formed since beginning of loop
-            removeSince(a,startlen)
+            removeSince(a,startStackLen,startTriLen)
             continue
 
-        if not triangulate(a,perim[range(0,i-pn-1,-1)] ): # i through 0
+        if not triangulate(a,perim[range(0,i-pn-1,-1)]): # i through 0
            # remove the links formed since beginning of loop
-           removeSince(a,startlen)
+           removeSince(a,startStackLen,startTriLen)
            continue
 
         # This will be a list of the first generation triangles
-        try:
-            a.triangulation.append(t0)
-        except AttributeError:
-            a.triangulation = [t0]
+        a.triangulation.append(t0)
 
+        # This triangle and the ones to its sides succeeded
         return True
 
+    # Could not find a solution
     return False
     
 def maxFields(a):

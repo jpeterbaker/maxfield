@@ -47,12 +47,22 @@ def greatArcAng(x,y):
     x,y should be in latitude/longitude
     Great arc angle between x and y (in radians)
     '''
+
+    # If either is a single point (not in a list) return a 1-d array
+    flatten = y.ndim==1 or x.ndim==1
+
     # Formula taken from Wikipedia, accurate for distances great and small
     x = x.reshape([-1,2])
     y = y.reshape([-1,2])
     
-    latx,lngx = x[:,0],x[:,1]
-    laty,lngy = y[:,0],y[:,1]
+    nx = x.shape[0]
+    ny = y.shape[0]
+
+    # After reshaping, arithmetic operators produce distance-style matrices
+    latx = np.tile(x[:,0],[ny,1])
+    lngx = np.tile(x[:,1],[ny,1])
+    laty = np.tile(y[:,0],[nx,1]).T
+    lngy = np.tile(y[:,1],[nx,1]).T
 
     dlng = np.abs(lngx-lngy)
 
@@ -69,7 +79,12 @@ def greatArcAng(x,y):
     denom = siny*sinx + cosy*cosx*cosd
 
     # great arc angle containing x and y
-    return np.arctan2(numer,denom)
+    angles = np.arctan2(numer,denom)
+
+    if flatten:
+        angles.shape = -1
+
+    return angles
 
 def sphereDist(x,y,R=6371000):
     sigma = greatArcAng(x,y)
@@ -103,7 +118,8 @@ def sphereTriContains(pts,x):
 def planeDist(x,y):
     x = x.reshape([-1,2])
     y = y.reshape([-1,2])
-    return np.sqrt(np.sum((x-y)**2,1))
+
+    return np.sqrt(np.array([ [sum( (a-b)**2 ) for a in y] for b in x ]))
 
 def makeLace(n):
     # sequence of perimeter nodes to hit for a lacing-style triangulation
@@ -215,4 +231,73 @@ def getPerim(pts):
             b = c
 
     return perimlist
+
+def arc(a,b,c):
+    '''
+    Finds the arc through three points in a plane
+    returns z,r,ta,tb,tc
+
+    z = [x,y] is the center of the arc
+    r is the radius of the arc
+    a = z+r*[cos(ta),sin(ta)]
+    b = z+r*[cos(tb),sin(tb)]
+    c = z+r*[cos(tc),sin(tc)]
+    '''
+    
+    # center points on b
+    ab = a-b
+    cb = c-b
+    ac = a-c
+
+    # squared lengths
+    slab =  ab[0]**2+ab[1]**2
+    slcb =  cb[0]**2+cb[1]**2
+    # length
+    lac = (ac[0]**2+ac[1]**2)**.5
+
+    # this is from wikipedia http://en.wikipedia.org/wiki/Circumscribed_circle
+    D = 2*(ab[0]*cb[1]-ab[1]*cb[0])
+    z = np.array([ cb[1]*slab - ab[1]*slcb ,\
+                   ab[0]*slcb - cb[0]*slab ])/D + b
+
+    # the angle a,b,c
+    t = np.abs( np.arctan(ab[1]/ab[0]) - np.arctan(cb[1]/cb[0]) )
+
+    # the angle a,z,c is 2*t
+    # the angles a,c,z and c,a,z are equal (isosolecsescscs triangle)
+    # a,c,z + c,a,z + a,z,c = 180
+    acz = np.pi/2-t
+
+    # d is the midpoint of ac
+    lad = lac/2 # the length of ad
+
+    # d,c,z is a right triangle with hypoteneuse az
+    # and since a,c,z = a,d,z
+    r = lad/np.cos(acz)
+
+    az = a-z
+    bz = b-z
+    cz = c-z
+    ta = np.arctan2(az[1],az[0])
+    tb = np.arctan2(bz[1],bz[0])
+    tc = np.arctan2(cz[1],cz[0])
+    
+    return z,r,ta,tb,tc
+
+
+if __name__ == '__main__':
+    a = np.array([1., 1])
+    b = np.array([1.,-1])
+    c = np.array([3., 1])
+
+    z,r,ta,tb,tc = arc(a,b,c)
+    print z,r
+    print ta/np.pi
+    print tb/np.pi
+    print tc/np.pi
+    z,r,ta,tb,tc = arc(a,c,b)
+    print z,r
+    print ta/np.pi
+    print tb/np.pi
+    print tc/np.pi
 

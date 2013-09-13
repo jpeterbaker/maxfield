@@ -3,8 +3,9 @@ import sys
 
 args = sys.argv
 
-# Number of sample plans to take in attempt to reduce number of keys to farm
-TRIES = 12
+# We will take many samples in an attempt to reduce number of keys to farm
+# This is the number of samples to take since the last improvement
+EXTRA_SAMPLES = 20
 
 if len(args) < 3:
     print '''
@@ -40,7 +41,7 @@ if len(args) < 3:
     exit()
 
 import networkx as nx
-from lib import maxfield,PlanPrinter,geometry
+from lib import maxfield,PlanPrinter,geometry,agentOrder
 np = geometry.np
 import pickle
 
@@ -75,13 +76,13 @@ if input_file[-3:] != 'pkl':
     # each line should be id,name,lat,long,keys
     with open(input_file,'r') as fin:
         for line in fin:
-            if line[0] == '%':
-                break
             parts = line.split(',')
             
             a.add_node(i)
-            a.node[i]['name'] = parts[0]
+            a.node[i]['name'] = parts[0].strip()
 
+            if len(parts) == 0:
+                break
             locs.append( np.array(parts[1:3],dtype=int) )
 
             if len(parts) < 4:
@@ -105,17 +106,22 @@ if input_file[-3:] != 'pkl':
         a.node[i]['xyz'] = xyz [i]
         a.node[i]['xy' ] = xy  [i]
 
-    # Make TRIES attempts to get graph with few missing keys
+    # EXTRA_SAMPLES attempts to get graph with few missing keys
     # Try to minimuze TK + 2*MK where
     #   TK is the total number of missing keys
     #   MK is the maximum number of missing keys for any single portal
     bestgraph = None
     bestlack = np.inf
+    bestTK = np.inf
+    bestMK = np.inf
 
-    for i in range(TRIES):
+    sinceImprove = 0
+    
+    while sinceImprove<EXTRA_SAMPLES:
         b = a.copy()
 
         if not maxfield.maxFields(b):
+            print 'Failed maxfield (if this happens many times, this loop could be infinite. I''ll fix this sometime)'
             continue
 
         TK = 0
@@ -129,15 +135,32 @@ if input_file[-3:] != 'pkl':
         weightedlack = TK+2*MK
 
         if weightedlack < bestlack:
+            sinceImprove = 0
+            print 'IMPROVEMENT:\n\ttotal: %s\n\tmax:   %s\n\tweighted: %s'%\
+                   (TK,MK,weightedlack)
             bestgraph = b
             bestlack  = weightedlack
+            bestTK  = TK
+            bestMK  = MK
+        else:
+            print 'this time:\n\ttotal: %s\n\tmax:   %s\n\tweighted: %s'%\
+                   (TK,MK,weightedlack)
 
         if weightedlack == 0:
+            print 'KEY PERFECTION'
+            bestlack  = weightedlack
+            bestTK  = TK
+            bestMK  = MK
             break
+
+        sinceImprove += 1
+        print '%s tries since improvement'%sinceImprove
 
     if bestgraph == None:
         print 'EXITING RANDOMIZATION LOOP WITHOUT SOLUTION!'
         exit()
+
+    print 'Choosing plan requiring %s additional keys, max of %s from single portal'%(bestTK,bestMK)
 
     a = bestgraph
 
@@ -145,13 +168,16 @@ if input_file[-3:] != 'pkl':
     for t in a.triangulation:
         t.markEdgesWithFields()
 
+    agentOrder.improveEdgeOrder(a)
+
     with open(output_directory+output_file,'w') as fout:
         pickle.dump(a,fout)
 else:
     with open(input_file,'r') as fin:
         a = pickle.load(fin)
-
-print 'so far so good'
+#    agentOrder.improveEdgeOrder(a)
+#    with open(output_directory+output_file,'w') as fout:
+#        pickle.dump(a,fout)
 
 PP = PlanPrinter.PlanPrinter(a,output_directory,nagents)
 PP.keyPrep()
@@ -159,5 +185,5 @@ PP.agentKeys()
 PP.planMap()
 PP.agentLinks()
 #PP.animate()
-#PP.instruct()
+#PP.split3instruct()
 

@@ -10,19 +10,27 @@ def try_ordered_edge(a,p,q,reversible):
     if a.has_edge(p,q) or a.has_edge(q,p):
         return
 
-    if reversible and a.out_degree(p) > a.out_degree(q):
-        p,q = q,p
+#    if reversible and a.out_degree(p) > a.out_degree(q):
+#        p,q = q,p
 
     if a.out_degree(p) >= 8:
         if not reversible:
+#            print '%s already has 8 outgoing'%p
             raise(Deadend('%s already has 8 outgoing'%p))
         if a.out_degree(q) >= 8:
+#            print '%s and %s already have 8 outgoing'%(p,q)
             raise(Deadend('%s and %s already have 8 outgoing'%(p,q)))
         p,q = q,p
     
     m = a.size()
     a.add_edge(p,q,{'order':m,'reversible':reversible,'fields':[]})
-    a.edgeStack.append( (p,q) )
+
+    try:
+        a.edgeStack.append( (p,q) )
+    except AttributeError:
+        a.edgeStack = [ (p,q) ]
+#    print 'adding',p,q
+#    print a.edgeStack
 
 class Triangle:
     def __init__(self,verts,a,exterior=False):
@@ -110,11 +118,13 @@ class Triangle:
 #        print 'building final',self.tostr()
         if self.exterior:
             # Avoid making the final the link origin when possible
+#            print self.tostr(),'is exterior'
             try_ordered_edge(self.a,self.verts[1],\
                                self.verts[0],self.exterior)
             try_ordered_edge(self.a,self.verts[2],\
                                self.verts[0],self.exterior)
         else:
+#            print self.tostr(),'is NOT exterior'
             try_ordered_edge(self.a,self.verts[0],\
                                self.verts[1],self.exterior)
             try_ordered_edge(self.a,self.verts[0],\
@@ -167,6 +177,15 @@ class Triangle:
                 p,q = q,p
             # The graph should have been completed by now, so the edge p,q exists
             edges[i] = (p,q)
+            if not self.a.has_edge(p,q):
+                print 'a does NOT have edge',p,q
+                print 'there is a programming error'
+                print 'a only has the edges:'
+                for p,q in self.a.edges_iter():
+                    print p,q
+                print 'a has %s 1st gen triangles:'%len(self.a.triangulation)
+                for t in self.a.triangulation:
+                    print t.verts
 
         edgeOrders = [self.a.edge[p][q]['order'] for p,q in edges]
 

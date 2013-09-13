@@ -1,0 +1,40 @@
+Keys for Agent 3 of 3
+
+Map# Keys Name
+  25    2 AA
+  12      Albertus
+  23    1 Anne Plaza
+   7      Architecture Roof
+   1      Art on Campus
+   3    1 Blaffer
+  26    2 Bronze Cougars
+  22    1 Cheyenne
+  32    2 Colourful Serpentine
+  28    2 Cube Geysers
+  10      Cultural Reach
+  34    1 Four Lies
+  21    1 Gourds
+  13    1 Half Spheres
+  35    3 Healing Nature
+  30    1 Hilton Twist
+  29    2 Lynn Plaza
+   4    1 Orpheus
+   6    1 Pond Art
+  14    1 Quad Art
+  15    1 Red Crane
+  11    1 Redtub
+  19      Sandy
+  36      Shapeless Triangle
+  20    1 Sofu Teshighara
+  31    1 Spikey Flag
+  17      Tau Beta
+   9    2 Troika
+  16    1 Tube Tree
+  18    1 UH Art
+   0    1 UH Baseball Chairs
+  27    2 UH Seal
+   8    1 UH Walking Giants
+   5    1 Violin Player
+  24    1 Waterfall
+  33    1 Welcome Center
+   2    2 Winged Victory
