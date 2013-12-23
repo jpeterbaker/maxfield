@@ -120,8 +120,10 @@ if input_file[-3:] != 'pkl':
     while sinceImprove<EXTRA_SAMPLES:
         b = a.copy()
 
+        sinceImprove += 1
+
         if not maxfield.maxFields(b):
-            print 'Failed maxfield (if this happens many times, this loop could be infinite. I''ll fix this sometime)'
+            print 'Randomization failure\nThe program may work if you try again. It is more likely to work if you remove some protals.'
             continue
 
         TK = 0
@@ -153,11 +155,11 @@ if input_file[-3:] != 'pkl':
             bestMK  = MK
             break
 
-        sinceImprove += 1
         print '%s tries since improvement'%sinceImprove
 
     if bestgraph == None:
         print 'EXITING RANDOMIZATION LOOP WITHOUT SOLUTION!'
+        print ''
         exit()
 
     print 'Choosing plan requiring %s additional keys, max of %s from single portal'%(bestTK,bestMK)
