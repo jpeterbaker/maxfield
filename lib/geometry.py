@@ -200,16 +200,22 @@ def between(a,b,pts):
         return c
 
 def getPerim(pts):
-    # These are for planar points
-    # This could cause problems if the playfield contains the North or South pole or any pont of the 180th meridian
+    '''
+    Returns a list of indices of the points on the "outside" (in the boundary of the convex hull)
+
+    This is for planar points (spherical points should be get Gnomonic projection first)
+    '''
+
+    # Point with the greatest x-coordinate is certainly outside
     hix = np.argmax(pts[:,0])
-    hiy = np.argmax(pts[:,1:])
-    
-    perim = {hix:hiy , hiy:hix}
+    # Same goes for the point with the least x-coordinate
+    lox = np.argmin(pts[:,0])
+
+    perim = {hix:lox , lox:hix}
     perimlist = []
 
     a = hix
-    b = hiy
+    b = lox
     
     aNeverChanged = True
 
