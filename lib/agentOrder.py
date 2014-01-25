@@ -4,95 +4,183 @@ np = geometry.np
 
 import orderedTSP
 
-# Number of meters one could walk in the time it takes to make a link
-# This is ignored by branch-and-bound
-#linkTime = 5
-#
-#def getGreedyAgentOrder(a,nagents,orderedEdges):
-#    '''
-#    a is a digraph
-#        node have 'pos' property with location
-#    nagents is the number of agents
-#    orderedEdges maps i to the ith edge to be made
-#
-#    this greedily minimizes wait time (equating distance with time)
-#    the player who has the most time to spare is assigned the link
-#
-#     THIS FUNCTION IS NOT AS GOOD AS BRANCH-AND-BOUND
-#    '''
-#    m = len(orderedEdges)
-#
-#    # movements[i][j] will be the index (in orderedEdges) of the jth edge that agent i should make
-#    movements = dict([ (i,[]) for i in range(nagents) ])
-#
-#    # The ammount of time that has elapsed
-#    curtime = 0.
-#
-#    # Last time at which the agents made links
-#    lastActTime = np.zeros(nagents)
-#    
-#    # agent locations
-#    agentpos = np.empty([nagents,2])
-#
-#    # Find initial deployments: starts[i] is the agent who starts at node i
-#    starts = {}
-#    assigning = 0
-#
-#    e=0
-#    for e in xrange(m):
-#        p = orderedEdges[e][0]
-#        if not p in starts:
-#            # Nobody is at this link's head yet
-#            movements[assigning].append(e)
-#            starts[p] = assigning
-#            
-#            agentpos[assigning] = a.node[p]['geo']
-#
-#            assigning += 1
-#            if assigning >= nagents:
-#                break
-#        else:
-#            # the agent who is already at this link's head should make it
-#            movements[starts[p]].append(e)
-#
-#    # No agents have actually moved yet
-#
-#    # continue from startup loop
-#    for e in xrange(e+1,m):
-#        p,q = orderedEdges[e]
-#        ppos = a.node[p]['geo']
-#
-#        dists = geometry.sphereDist(agentpos,ppos)
-#        radii = curtime-lastActTime # how far could they have moved
-#        waits = dists-radii # how long will the team wait if this agent moves
-#        waits[waits<0] = 0 # no time travel
-#
-#        mover = np.argmin(waits)
-#        movements[mover].append(e)
-#
-#        agentpos[mover] = ppos
-#        curtime += waits[mover] + linkTime
-#        lastActTime[mover] = curtime
-#    
-#    return movements
+# Walking speed in m/s
+WALKSPEED = 2
+# Seconds it takes to communicate link completion
+# Agents should report their consecutive links simultaneously
+COMMTIME = 60
+# Seconds to create a link
+LINKTIME = 15
+
+## DEPRECIATED ##
+def getGreedyAgentOrder_DONT_USE_THIS_FUNCTION(a,nagents,orderedEdges):
+    '''
+    a is a digraph
+        node have 'pos' property with location
+    nagents is the number of agents
+    orderedEdges maps i to the ith edge to be made
+
+    this greedily minimizes wait time (equating distance with time)
+    the player who has the most time to spare is assigned the link
+    '''
+    m = len(orderedEdges)
+
+    # movements[i][j] will be the index (in orderedEdges) of the jth edge that agent i should make
+    movements = dict([ (i,[]) for i in range(nagents) ])
+
+    # The ammount of time that has elapsed
+    curtime = 0.
+
+    # Last time at which the agents made links
+    lastActTime = np.zeros(nagents)
+    
+    # agent locations
+    agentpos = np.empty([nagents,2])
+
+    # Find initial deployments: starts[i] is the agent who starts at node i
+    starts = {}
+    assigning = 0
+
+    e=0
+    for e in xrange(m):
+        p = orderedEdges[e][0]
+        if not p in starts:
+            # Nobody is at this link's head yet
+            movements[assigning].append(e)
+            starts[p] = assigning
+            
+            agentpos[assigning] = a.node[p]['geo']
+
+            assigning += 1
+            if assigning >= nagents:
+                break
+        else:
+            # the agent who is already at this link's head should make it
+            movements[starts[p]].append(e)
+
+    # No agents have actually moved yet
+
+    # continue from startup loop
+    for e in xrange(e+1,m):
+        p,q = orderedEdges[e]
+        ppos = a.node[p]['geo']
+
+        dists = geometry.sphereDist(agentpos,ppos)
+        radii = curtime-lastActTime # how far could they have moved
+        waits = dists-radii # how long will the team wait if this agent moves
+        waits[waits<0] = 0 # no time travel
+
+        mover = np.argmin(waits)
+        movements[mover].append(e)
+
+        agentpos[mover] = ppos
+        curtime += waits[mover] + linkTime
+        lastActTime[mover] = curtime
+    
+    return movements
+
+def condenseOrder(order):
+    '''
+    order is a list of integers
+    returns (s,mult)
+        where
+    mult[i] is the multiplicity of a sequence of repeated s[i]'s in order
+
+    EXAMPLE:
+        condenseOrder( [0,5,5,5,2,2,3,0] )
+            returns
+        ( [0,5,2,3,0] , [1,3,2,1,1] )
+    '''
+    s = []
+    mult = []
+
+    cur = order[0]
+    count = 0
+    for i in order:
+        if i == cur:
+            # Count the cur's in a row
+            count += 1
+        else:
+            # Add cur and its count to the lists
+            s.append(cur)
+            mult.append(count)
+
+            # Start counting the new entry
+            cur   = i
+            count = 1
+
+    # The last sequence never entered the else
+    s.append(cur)
+    mult.append(count)
+
+    return s,mult
+
+def expandOrder(s,mult):
+    '''
+    returns a list with s[i] appearing multi[i] times (in place)
+
+    This is the inverse of condenseOrder
+
+    EXAMPLE:
+        expandOrder( [0,5,2,3,0] , [1,3,2,1,1] )
+            returns
+        [0,5,5,5,2,2,3,0]
+        
+    '''
+    m = len(s)
+    n = sum(mult)
+    order = [None]*n
+
+    writeat = 0
+    for i in xrange(m):
+        count = mult[i]
+        # Put in count occurences of s[i]
+        order[writeat:writeat+count] = [s[i]]*count
+        writeat += count
+
+    return order
 
 def getAgentOrder(a,nagents,orderedEdges):
     '''
     returns visits
     visits[i] = j means agent j should make edge i
+    
+    ALSO creates time attributes in a:
+        
+    Time that must be spent just walking
+        a.walktime
+    Time it takes to communicate completion of a sequence of links
+        a.commtime
+    Time spent navigating linking menu
+        a.linktime
     '''
     geo = np.array([ a.node[i]['geo'] for i in xrange(a.order())])
     d = geometry.sphereDist(geo,geo)
 #    print d
     order = [e[0] for e in orderedEdges]
-    link2agent , times = orderedTSP.getVisits(d,order,nagents)
 
-    print 'Plan can be completed in time it takes one agent to walk',times[-1],'meters'
+    # Reduce sequences of links made from same portal to single entry
+    condensed , mult = condenseOrder(order)
+
+    link2agent , times = orderedTSP.getVisits(d,condensed,nagents)
+
+    # Expand links made from same portal to original count
+    link2agent = expandOrder(link2agent,mult)
+
+    # If agents communicate sequential completions all at once, we avoid waiting for multiple messages
+    # To find out how many communications will be sent, we count the number of same-agent link sequences
+    condensed , mult = condenseOrder(link2agent)
+    numCOMMs = len(condensed)
+
+    # Time that must be spent just walking
+    a.walktime = times[-1]/WALKSPEED
+    # Waiting for link completion messages to be sent
+    a.commtime = numCOMMs*COMMTIME
+    # Time spent navigating linking menu
+    a.linktime = a.size()*LINKTIME
 
     movements = [None]*nagents
 
-    # I realize that switching between these formats all the time is stupid
-    # Consistency hasn't been my highest priority
     for i in xrange(len(link2agent)):
         try:    
             movements[link2agent[i]].append(i)
@@ -185,4 +273,22 @@ def improveEdgeOrder(a):
 #    print
 
 if __name__=='__main__':
-    pass
+    order = [0,5,5,5,2,2,1,0]
+#    order = [5]*5
+    s,mult = condenseOrder(order)
+    print s
+    print mult
+    print order
+    print expandOrder(s,mult)
+'''
+== Jonathan: maxfield $ python makePlan.py 4 almere/lastPlan.pkl almere/
+Total time: 1357.37352334
+== Jonathan: maxfield $ python makePlan.py 5 almere/lastPlan.pkl almere/
+Total time: 995.599917771
+== Jonathan: maxfield $ python makePlan.py 6 almere/lastPlan.pkl almere/
+Total time: 890.389138077
+== Jonathan: maxfield $ python makePlan.py 7 almere/lastPlan.pkl almere/
+Total time: 764.127789228
+== Jonathan: maxfield $ python makePlan.py 8 almere/lastPlan.pkl almere/
+Total time: 770.827639967
+'''

@@ -2,9 +2,7 @@
 import branch_bound
 np = branch_bound.np
 
-# Change this number to balance runtime and walking distance
-# The higher, the longer it will take to run, but the less you'll have to walk
-MAX_BRANCHES = 5000
+MAX_BRANCHES = 10000
 
 # This could be used if more splits are wanted than are possible
 infState = branch_bound.InfState()

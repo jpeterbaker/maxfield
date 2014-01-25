@@ -1,42 +1,42 @@
 These portals' first links are incoming
 They should be at full resonators before linking
   AA
-  Albertus
+  Anne Plaza
   Art on Campus
+  Blaffer
   Bronze Cougars
   Cheyenne
+  Colourful Serpentine
   Cube Geysers
   Four Lies
   Gourds
   Half Spheres
+  Healing Nature
   Hilton Twist
   Lynn Plaza
-  Orpheus
   Pond Art
+  Quad Art
   Red Crane
-  Redtub
+  Sandy
   Shapeless Triangle
-  Spikey Flag
-  Tau Beta
   Troika
   Tube Tree
-  UH Art
   UH Baseball Chairs
   UH Seal
   UH Walking Giants
   Violin Player
-  Waterfall
   Welcome Center
   Winged Victory
 
 These portals' first links are outgoing
 Their resonators can be applied when first agent arrives
-  Anne Plaza
+  Albertus
   Architecture Roof
-  Blaffer
-  Colourful Serpentine
   Cultural Reach
-  Healing Nature
-  Quad Art
-  Sandy
+  Orpheus
+  Redtub
   Sofu Teshighara
+  Spikey Flag
+  Tau Beta
+  UH Art
+  Waterfall

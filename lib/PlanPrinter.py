@@ -136,52 +136,52 @@ class PlanPrinter:
         if edges == None:
             edges = range(self.m)
 
-        anchors = np.array([ self.xy[self.orderedEdges[e],:] for e in edges]).mean(1)
-        edgeLabelPos = electricSpring.edgeLabelPos(self.xy,anchors)
+#        anchors = np.array([ self.xy[self.orderedEdges[e],:] for e in edges]).mean(1)
+#        edgeLabelPos = electricSpring.edgeLabelPos(self.xy,anchors)
+#
+#        self.drawBlankMap()
+#
+#        for i in xrange(len(edges)):
+#            j = edges[i]
+#            p,q = self.orderedEdges[j]
+#            plt.plot([ self.xy[p,0],edgeLabelPos[i,0],self.xy[q,0] ]  ,\
+#                     [ self.xy[p,1],edgeLabelPos[i,1],self.xy[q,1] ],'r-')
+#
+#            plt.text(edgeLabelPos[i,0],edgeLabelPos[i,1],j,\
+#                     ha='center',va='center')
 
-        self.drawBlankMap()
+### The code below works. It just uses networkx draw functions
+        if edges == None:
+            b = self.a
+        else:
+            b = nx.DiGraph()
+            b.add_nodes_from(xrange(self.n))
 
-        for i in xrange(len(edges)):
-            j = edges[i]
-            p,q = self.orderedEdges[j]
-            plt.plot([ self.xy[p,0],edgeLabelPos[i,0],self.xy[q,0] ]  ,\
-                     [ self.xy[p,1],edgeLabelPos[i,1],self.xy[q,1] ],'r-')
+            b = nx.DiGraph()
+            b.add_nodes_from(xrange(self.n))
 
-            plt.text(edgeLabelPos[i,0],edgeLabelPos[i,1],j,\
-                     ha='center',va='center')
+            for e in edges:
+                p,q = self.orderedEdges[e]
+                b.add_edge(p,q,{'order':e})
 
-#### The code below works. It just uses networkx draw functions
-#        if edges == None:
-#            b = self.a
-#        else:
-#            b = nx.DiGraph()
-#            b.add_nodes_from(xrange(self.n))
-#
-#            b = nx.DiGraph()
-#            b.add_nodes_from(xrange(self.n))
-#
-#            for e in edges:
-#                p,q = self.orderedEdges[e]
-#                b.add_edge(p,q,{'order':e})
-#
-#        edgelabels = dict([ (e,self.a.edge[e[0]][e[1]]['order'])\
-#                            for e in b.edges_iter() ])
-#
-#        plt.plot(self.xy[:,0],self.xy[:,1],'o',ms=16,color=(0,1,0))
-#
-#        for j in xrange(self.n):
-#            i = self.posOrder[j]
-#            plt.text(self.xy[i,0],self.xy[i,1],j,\
-#                     fontweight='bold',ha='center',va='center')
-#
-#        try:
-#            nx.draw_networkx_edge_labels(b,self.ptmap,edgelabels)
-#        except AttributeError:
-#            self.ptmap   = dict([(i,self.a.node[i]['xy']) for i in xrange(self.n) ])
-#            nx.draw_networkx_edge_labels(b,self.ptmap,edgelabels)
-#
-#        nx.draw_networkx_edges(b,self.ptmap,edge_color='g')
-#        plt.axis('off')
+        edgelabels = dict([ (e,self.a.edge[e[0]][e[1]]['order'])\
+                            for e in b.edges_iter() ])
+
+        plt.plot(self.xy[:,0],self.xy[:,1],'o',ms=16,color=(0,1,0))
+
+        for j in xrange(self.n):
+            i = self.posOrder[j]
+            plt.text(self.xy[i,0],self.xy[i,1],j,\
+                     fontweight='bold',ha='center',va='center')
+
+        try:
+            nx.draw_networkx_edge_labels(b,self.ptmap,edgelabels)
+        except AttributeError:
+            self.ptmap   = dict([(i,self.a.node[i]['xy']) for i in xrange(self.n) ])
+            nx.draw_networkx_edge_labels(b,self.ptmap,edgelabels)
+
+        nx.draw_networkx_edges(b,self.ptmap,edge_color='g')
+        plt.axis('off')
 
     def planMap(self):
 
@@ -194,44 +194,41 @@ class PlanPrinter:
         xylims *= 1.1
 
         # Plot labels aligned to avoid other portals
-#        for i in xrange(self.n):
-#            plt.plot(self.xy[i,0],self.xy[i,1],'go')
-#
-#            displaces = self.xy[i] - self.xy
-#            displaces[i,:] = np.inf
-#
-#            nearest = np.argmin(np.abs(displaces).sum(1))
-#
-#            if self.xy[nearest,0] < self.xy[i,0]:
-#                ha = 'left'
-#            else:
-#                ha = 'right'
-#            if self.xy[nearest,1] < self.xy[i,1]:
-#                va = 'bottom'
-#            else:
-#                va = 'top'
-#            
-#            plt.text(self.xy[i,0],self.xy[i,1],self.names[i],ha=ha,va=va)
-#
-#
-#        plt.title('Portal Positions')
-#
-##        plt.plot(0,0,'r*')
-#        fig = plt.gcf()
-#        plt.axis('off')
-#        fig.set_size_inches(6.5,9)
-#        plt.axis(xylims)
-#        plt.savefig(self.outputDir+'nameMap.png')
-##        plt.show()
-#        plt.clf()
+        for i in xrange(self.n):
+            plt.plot(self.xy[i,0],self.xy[i,1],'go')
 
-        # Draw the map with all edges in place and labeled
-#        self.drawSubgraph()
-        self.drawBlankMap()
+            displaces = self.xy[i] - self.xy
+            displaces[i,:] = np.inf
+
+            nearest = np.argmin(np.abs(displaces).sum(1))
+
+            if self.xy[nearest,0] < self.xy[i,0]:
+                ha = 'left'
+            else:
+                ha = 'right'
+            if self.xy[nearest,1] < self.xy[i,1]:
+                va = 'bottom'
+            else:
+                va = 'top'
+            
+            plt.text(self.xy[i,0],self.xy[i,1],str(i),ha=ha,va=va)
+
+
+        fig = plt.gcf()
+        fig.set_size_inches(6.5,9)
         plt.axis(xylims)
         plt.axis('off')
         plt.title('Portals are numbered north to south\nNames appear on key list')
         plt.savefig(self.outputDir+'portalMap.png')
+#        plt.show()
+        plt.clf()
+
+        # Draw the map with all edges in place and labeled
+        self.drawSubgraph()
+#        self.drawBlankMap()
+        plt.axis(xylims)
+        plt.axis('off')
+        plt.savefig(self.outputDir+'linkMap.png')
         plt.clf()
 
 #        for agent in range(self.nagents):
@@ -270,12 +267,18 @@ class PlanPrinter:
                 fout.write('Complete link schedule issued to agent %s of %s\n'\
                     %(agent+1,self.nagents))
                 
-                fout.write('Total distance  : %s m\n'%int(agentdists[agent]))
-                fout.write('Total experience: %s AP\n'%(agentexps[agent]))
-                fout.write('Links marked with * can be made EARLY\n')
+                totalTime = self.a.walktime+self.a.linktime+self.a.commtime
+
+                fout.write('\nTotal time estimate: %s minutes\n\n'%int(totalTime/60+.5))
+
+                fout.write('Agent distance:   %s m\n'%int(agentdists[agent]))
+                fout.write('Agent experience: %s AP\n'%(agentexps[agent]))
+
+                fout.write('\nLinks marked with * can be made EARLY\n')
 
                 fout.write('\nLink  Agent Map# Link Origin\n')
                 fout.write('                 Link Destination\n')
+                fout.write('-----------------------------------\n')
                 #             1234112345612345 name
                 
                 for i in xrange(self.m):

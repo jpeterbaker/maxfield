@@ -78,11 +78,12 @@ if input_file[-3:] != 'pkl':
         for line in fin:
             parts = line.split(',')
             
+            if len(parts) < 3:
+                break
+
             a.add_node(i)
             a.node[i]['name'] = parts[0].strip()
 
-            if len(parts) == 0:
-                break
             locs.append( np.array(parts[1:3],dtype=int) )
 
             if len(parts) < 4:
@@ -116,7 +117,7 @@ if input_file[-3:] != 'pkl':
     bestMK = np.inf
 
     sinceImprove = 0
-    
+
     while sinceImprove<EXTRA_SAMPLES:
         b = a.copy()
 
@@ -155,6 +156,10 @@ if input_file[-3:] != 'pkl':
             bestMK  = MK
             break
 
+        if all([ b.node[i]['keys'] <= b.out_degree(i) for i in xrange(n) ]):
+            print 'All keys used. Improvement impossible'
+            break
+
         print '%s tries since improvement'%sinceImprove
 
     if bestgraph == None:
@@ -186,6 +191,8 @@ PP.keyPrep()
 PP.agentKeys()
 PP.planMap()
 PP.agentLinks()
+
+# These make step-by-step instructional images
 #PP.animate()
 #PP.split3instruct()
 

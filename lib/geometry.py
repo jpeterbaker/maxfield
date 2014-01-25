@@ -44,7 +44,7 @@ def xyztorads(pts,R=1):
 
 def greatArcAng(x,y):
     '''
-    x,y should be in latitude/longitude
+    x,y should be nx2 arrays expressing latitude,longitude (in radians)
     Great arc angle between x and y (in radians)
     '''
 
@@ -87,6 +87,9 @@ def greatArcAng(x,y):
     return angles
 
 def sphereDist(x,y,R=6371000):
+    '''
+    x,y are n x 2 arrays with lattitude, longitude in radians
+    '''
     sigma = greatArcAng(x,y)
     return R*sigma
 
@@ -200,22 +203,16 @@ def between(a,b,pts):
         return c
 
 def getPerim(pts):
-    '''
-    Returns a list of indices of the points on the "outside" (in the boundary of the convex hull)
-
-    This is for planar points (spherical points should be get Gnomonic projection first)
-    '''
-
-    # Point with the greatest x-coordinate is certainly outside
+    # These are for planar points
+    # This could cause problems if the playfield contains the North or South pole or any pont of the 180th meridian
     hix = np.argmax(pts[:,0])
-    # Same goes for the point with the least x-coordinate
-    lox = np.argmin(pts[:,0])
-
-    perim = {hix:lox , lox:hix}
+    hiy = np.argmax(pts[:,1:])
+    
+    perim = {hix:hiy , hiy:hix}
     perimlist = []
 
     a = hix
-    b = lox
+    b = hiy
     
     aNeverChanged = True
 
