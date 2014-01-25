@@ -194,7 +194,8 @@ class PlanPrinter:
         xylims *= 1.1
 
         # Plot labels aligned to avoid other portals
-        for i in xrange(self.n):
+        for j in xrange(self.n):
+            i = self.posOrder[j]
             plt.plot(self.xy[i,0],self.xy[i,1],'go')
 
             displaces = self.xy[i] - self.xy
@@ -211,7 +212,7 @@ class PlanPrinter:
             else:
                 va = 'top'
             
-            plt.text(self.xy[i,0],self.xy[i,1],str(i),ha=ha,va=va)
+            plt.text(self.xy[i,0],self.xy[i,1],str(j),ha=ha,va=va)
 
 
         fig = plt.gcf()

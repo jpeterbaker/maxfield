@@ -1,5 +1,7 @@
+
 *.pyc
-output/*
+output/
 *.png
 *.pkl
 *.txt
+*.swp
