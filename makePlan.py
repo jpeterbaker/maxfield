@@ -45,6 +45,19 @@ from lib import maxfield,PlanPrinter,geometry,agentOrder
 np = geometry.np
 import pickle
 
+#GREEN = 'g'
+#BLUE  = 'b'
+GREEN = '#3BF256' # Actual faction text colors in the app
+BLUE  = '#2ABBFF'
+#GREEN = (0.0 , 1.0 , 0.0 , 0.3)
+#BLUE  = (0.0 , 0.0 , 1.0 , 0.3)
+COLOR = GREEN
+
+if args[1] == '-b':
+    COLOR = BLUE
+    print COLOR
+    args = [args[0]] + args[2:]
+
 if len(args) < 4:
     output_directory = ''
 else:
@@ -186,7 +199,7 @@ else:
 #    with open(output_directory+output_file,'w') as fout:
 #        pickle.dump(a,fout)
 
-PP = PlanPrinter.PlanPrinter(a,output_directory,nagents)
+PP = PlanPrinter.PlanPrinter(a,output_directory,nagents,COLOR)
 PP.keyPrep()
 PP.agentKeys()
 PP.planMap()

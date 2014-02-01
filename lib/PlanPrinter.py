@@ -17,12 +17,14 @@ def commaGroup(n):
     return ','.join([ s[max(i,0):i+3] for i in range(len(s)-3,-3,-3)][::-1])
 
 class PlanPrinter:
-    def __init__(self,a,outputDir,nagents):
+    def __init__(self,a,outputDir,nagents,color='#FF004D'):
         self.a = a
         self.n = a.order() # number of nodes
         self.m = a.size()  # number of links
+
         self.nagents = nagents
         self.outputDir = outputDir
+        self.color = color
 
         # if the ith link to be made is (p,q) then orderedEdges[i] = (p,q)
         self.orderedEdges = [None]*self.m
@@ -121,7 +123,7 @@ class PlanPrinter:
                     ))
 
     def drawBlankMap(self):
-        plt.plot(self.xy[:,0],self.xy[:,1],'o',ms=16,color=(0,1,0))
+        plt.plot(self.xy[:,0],self.xy[:,1],'o',ms=16,color=self.color)
 
         for i in xrange(self.n):
             plt.text(self.xy[i,0],self.xy[i,1],self.nslabel[i],\
@@ -167,7 +169,7 @@ class PlanPrinter:
         edgelabels = dict([ (e,self.a.edge[e[0]][e[1]]['order'])\
                             for e in b.edges_iter() ])
 
-        plt.plot(self.xy[:,0],self.xy[:,1],'o',ms=16,color=(0,1,0))
+        plt.plot(self.xy[:,0],self.xy[:,1],'o',ms=16,color=self.color)
 
         for j in xrange(self.n):
             i = self.posOrder[j]
@@ -180,7 +182,13 @@ class PlanPrinter:
             self.ptmap   = dict([(i,self.a.node[i]['xy']) for i in xrange(self.n) ])
             nx.draw_networkx_edge_labels(b,self.ptmap,edgelabels)
 
-        nx.draw_networkx_edges(b,self.ptmap,edge_color='g')
+        # edge_color does not seem to support arbitrary colors easily
+        if self.color == '#3BF256':
+            nx.draw_networkx_edges(b,self.ptmap,edge_color='g')
+        elif self.color == '#2ABBFF':
+            nx.draw_networkx_edges(b,self.ptmap,edge_color='b')
+        else:
+            nx.draw_networkx_edges(b,self.ptmap,edge_color='k')
         plt.axis('off')
 
     def planMap(self):
@@ -196,7 +204,7 @@ class PlanPrinter:
         # Plot labels aligned to avoid other portals
         for j in xrange(self.n):
             i = self.posOrder[j]
-            plt.plot(self.xy[i,0],self.xy[i,1],'go')
+            plt.plot(self.xy[i,0],self.xy[i,1],'o',color=self.color)
 
             displaces = self.xy[i] - self.xy
             displaces[i,:] = np.inf
@@ -219,7 +227,7 @@ class PlanPrinter:
         fig.set_size_inches(6.5,9)
         plt.axis(xylims)
         plt.axis('off')
-        plt.title('Portals are numbered north to south\nNames appear on key list')
+        plt.title('Portals numbered north to south\nNames on key list')
         plt.savefig(self.outputDir+'portalMap.png')
 #        plt.show()
         plt.clf()
@@ -229,6 +237,7 @@ class PlanPrinter:
 #        self.drawBlankMap()
         plt.axis(xylims)
         plt.axis('off')
+        plt.title('Portal and Link Map')
         plt.savefig(self.outputDir+'linkMap.png')
         plt.clf()
 
