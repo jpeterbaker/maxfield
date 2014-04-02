@@ -267,8 +267,8 @@ class PlanPrinter:
                 agentexps[i] += 313 + 1250*len(self.a.edge[p][q]['fields'])
 
         # Different formatting for the agent's own links
-        plainStr = '{:4d}{:1s} {: 5d}{:5d} {:s}\n            {:4d} {:s}\n\n'
-        hilitStr = '{:4d}{:1s} {:_>5d}{:5d} {:s}\n            {:4d} {:s}\n\n'
+        plainStr = '{0:4d}{1:1s} {2: 5d}{3:5d} {4:s}\n            {5:4d} {6:s}\n\n'
+        hilitStr = '{0:4d}{1:1s} {2:_>5d}{3:5d} {4:s}\n            {5:4d} {6:s}\n\n'
         
         for agent in range(self.nagents):
             with open(self.outputDir+'links_for_agent_%s_of_%s.txt'\
@@ -410,7 +410,7 @@ class PlanPrinter:
 
             ax.set_title('AP:\n%s'%commaGroup(aptotal),ha='center')
             ax.axis('off')
-            plt.savefig(self.outputDir+'frame_{:02d}.png'.format(i))
+            plt.savefig(self.outputDir+'frame_{0:02d}.png'.format(i))
             ax.cla()
 
             for patch in newPatches:
@@ -468,7 +468,7 @@ class PlanPrinter:
             oldedges += newedges
 
             plt.axis('off')
-            plt.savefig(self.outputDir+'depth_{:02d}.png'.format(depth))
+            plt.savefig(self.outputDir+'depth_{0:02d}.png'.format(depth))
             plt.clf()
 
             depth += 1

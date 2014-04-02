@@ -3,7 +3,11 @@
 
     This is for Ingress. If you don't know what that is, you're lost.
 
-    This code is designed to make a plan for linking a given set of portals in the way (and the order) that creates the most fields. This is harder than it sounds. If you're working on more than a dozen portals, learning to use this code will be faster than planning by hand.
+    This code is designed to make a plan for linking a given set of portals in the way (and the order) that creates the most fields. This is harder than it sounds. If you're working on more than a dozen portals, learning to use this code may be faster than planning by hand.
+
+    This code follows the procedure in my YouTube video:
+
+    https://www.youtube.com/watch?v=priezq6Dm4Y
 
     -----Prerequisites-----
 
