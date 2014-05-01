@@ -46,10 +46,6 @@ import pickle
 def main():
 	args = docopt(__doc__)
 
-	if len(args) < 3:
-		print(__doc__)
-		exit()
-
 	# We will take many samples in an attempt to reduce number of keys to farm
 	# This is the number of samples to take since the last improvement
 	EXTRA_SAMPLES = 20
