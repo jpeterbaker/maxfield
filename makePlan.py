@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 """
 Usage:
-  makePlan.py [-b] <agent_count> <input_file> [<output_directory>] [<output_file>]
+  makePlan.py [-b] [-n <agent_count>] <input_file> [<output_directory>] [<output_file>]
 
 Description:
   This is for Ingress. If you don't know what that is, you're lost.
@@ -32,6 +32,7 @@ Description:
 
 Options:
   -b         Make maps blue instead of green
+  -n agents  Number of agents [default: 1]
 
 """
 
@@ -78,7 +79,7 @@ def main():
 		if not output_file[-3:] == 'pkl':
 			print 'WARNING: output file should end in "pkl" or you cannot use it as input later'
 
-	nagents = int(args['<agent_count>'])
+	nagents = int(args['-n'])
 	if nagents < 0:
 		print 'Numer of agents should be positive'
 		exit()
