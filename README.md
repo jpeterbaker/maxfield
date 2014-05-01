@@ -12,9 +12,13 @@ This code follows the procedure in my [YouTube video][0].
 
 # Prerequisites
 
-You'll need Python (I've got 2.7) as well as networkx and numpy
+You'll need [Python][2] (I've got 2.7) as well as networkx, numpy, and matplotlib.
 
 You can get these setup easily with the [Enthought Python Distribution][1].
+
+You can use [pip][3] to install the dependencies via:
+
+    pip install -r requirements.txt
 
 # Example
 
@@ -112,3 +116,5 @@ different plan.
 
 [0]: https://www.youtube.com/watch?v=priezq6Dm4Y
 [1]: https://www.enthought.com/downloads/
+[2]: https://www.python.org/download/releases/2.7
+[3]: https://pypi.python.org/pypi/pip
