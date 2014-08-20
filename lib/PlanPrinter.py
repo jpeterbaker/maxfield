@@ -49,7 +49,8 @@ class PlanPrinter:
 
         self.names = np.array([a.node[i]['name'] for i in xrange(self.n)])
         # The alphabetical order
-        self.nameOrder = np.argsort(self.names)
+        makeLowerCase = np.vectorize(lambda s: s.lower())
+        self.nameOrder = np.argsort(makeLowerCase(self.names))
 
         self.xy = np.array([self.a.node[i]['xy'] for i in xrange(self.n)])
 
