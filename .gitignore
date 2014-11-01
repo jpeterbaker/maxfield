@@ -3,6 +3,5 @@
 output/
 *.png
 *.pkl
-*.txt
 *.swp
-
+build/

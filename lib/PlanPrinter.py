@@ -1,4 +1,6 @@
 
+# Sorry that this whole file is so messy. Input/output issues are tough to make tidy.
+
 import matplotlib.pyplot as plt
 import geometry
 np = geometry.np
@@ -248,10 +250,12 @@ class PlanPrinter:
 #            plt.clf()
 
     def agentLinks(self):
+
         # Total distance traveled by each agent
         agentdists = np.zeros(self.nagents)
-        # Total experience for each agent
-        agentexps  = np.zeros(self.nagents,dtype=int)
+        # Total number of links, fields for each agent
+        agentlinkcount  = [0]*self.nagents
+        agentfieldcount = [0]*self.nagents
 
         for i in range(self.nagents):
             movie = self.movements[i]
@@ -264,31 +268,38 @@ class PlanPrinter:
                 agentdists[i] += dist
                 curpos = newpos
 
-                agentexps[i] += 313 + 1250*len(self.a.edge[p][q]['fields'])
+                agentlinkcount[i] += 1
+                agentfieldcount[i] += len(self.a.edge[p][q]['fields'])
 
         # Different formatting for the agent's own links
         plainStr = '{0:4d}{1:1s} {2: 5d}{3:5d} {4:s}\n            {5:4d} {6:s}\n\n'
         hilitStr = '{0:4d}{1:1s} {2:_>5d}{3:5d} {4:s}\n            {5:4d} {6:s}\n\n'
         
+        totalTime = self.a.walktime+self.a.linktime+self.a.commtime
+
         for agent in range(self.nagents):
             with open(self.outputDir+'links_for_agent_%s_of_%s.txt'\
                     %(agent+1,self.nagents),'w') as fout:
 
                 fout.write('Complete link schedule issued to agent %s of %s\n'\
                     %(agent+1,self.nagents))
+                fout.write('\nLinks marked with * can be made EARLY\n')
                 
-                totalTime = self.a.walktime+self.a.linktime+self.a.commtime
+                agentAP = 313*agentlinkcount[agent] + 1250*agentfieldcount[agent]
 
                 fout.write('\nTotal time estimate: %s minutes\n\n'%int(totalTime/60+.5))
 
-                fout.write('Agent distance:   %s m\n'%int(agentdists[agent]))
-                fout.write('Agent experience: %s AP\n'%(agentexps[agent]))
+                fout.write('----------- AGENT DATA -----------\n')
+                fout.write('Distance traveled: %s m\n'%int(agentdists[agent]))
+                fout.write('Links made:        %s\n'%(agentlinkcount[agent]))
+                fout.write('Fields completed:  %s\n'%(agentfieldcount[agent]))
+                fout.write('Total experience:  %s AP\n'%(agentAP))
 
-                fout.write('\nLinks marked with * can be made EARLY\n')
 
-                fout.write('\nLink  Agent Map# Link Origin\n')
+                fout.write('----------------------------------\n')
+                fout.write('Link  Agent Map# Link Origin\n')
                 fout.write('                 Link Destination\n')
-                fout.write('-----------------------------------\n')
+                fout.write('----------------------------------\n')
                 #             1234112345612345 name
                 
                 for i in xrange(self.m):
@@ -481,5 +492,4 @@ class PlanPrinter:
         plt.axis('off')
         plt.savefig(self.outputDir+'depth_%s.png'%depth)
         plt.clf()
-
 

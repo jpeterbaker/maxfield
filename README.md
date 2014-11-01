@@ -24,13 +24,13 @@ You can use [pip][3] to install the dependencies via:
 
 I'll be distributing this code with a file EXAMPLE.csv. Try running
 
-    python makePlan.py 4 EXAMPLE.csv out/ output.pkl
+    python makePlan.py -n 4 EXAMPLE.csv out/ output.pkl
 
 This will put a bunch of files into the "out/" directory (see OUTPUT FILE LIST)
 
 Now try running
 
-    python makePlan.py 3 out/output.pkl
+    python makePlan.py -n 3 out/output.pkl
 
 This uses the plan stored in output.pkl instead of calculating a new one. It will create files for 3 agents instead of 4.
 
@@ -77,7 +77,7 @@ No promises
 
 # Usage
 
-    python makePlan.py [-b] agent_count input_file [output_directory] [output_file]
+    python makePlan.py [-b] [-n agent_count] input_file [output_directory] [output_file]
 
     -b:          Include this option if you like your maps blue instead of green for any reason
 
