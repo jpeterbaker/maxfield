@@ -28,6 +28,7 @@ Description:
       name for a .pkl file containing information on the plan
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 args = sys.argv
 
 # We will take many samples in an attempt to reduce number of keys to farm
@@ -67,6 +68,8 @@ if len(args) < 3:
     '''
     exit()
 =======
+=======
+>>>>>>> FETCH_HEAD
       if you use this for the input file, the same plan will be produced with the
       number of agents you specify (default: "lastPlan.pkl")
 
@@ -78,7 +81,10 @@ Options:
 
 import sys
 from docopt import docopt
+<<<<<<< HEAD
 #>>>>>>> FETCH_HEAD
+=======
+>>>>>>> FETCH_HEAD
 
 import networkx as nx
 from lib import maxfield,PlanPrinter,geometry,agentOrder
