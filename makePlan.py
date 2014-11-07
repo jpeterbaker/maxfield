@@ -81,10 +81,10 @@ Options:
 
 import sys
 from docopt import docopt
-<<<<<<< HEAD
+#<<<<<<< HEAD
 #>>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
+#=======
+#>>>>>>> FETCH_HEAD
 
 import networkx as nx
 from lib import maxfield,PlanPrinter,geometry,agentOrder
