@@ -36,6 +36,12 @@ Options:
 
 """
 
+import sys
+from docopt import docopt
+import networkx as nx
+from lib import maxfield,PlanPrinter,geometry,agentOrder
+import pickle
+
 args = sys.argv
 
 # We will take many samples in an attempt to reduce number of keys to farm
@@ -74,12 +80,6 @@ if len(args) < 3:
                  default: "lastPlan.pkl"
     '''
     exit()
-
-import sys
-from docopt import docopt
-import networkx as nx
-from lib import maxfield,PlanPrinter,geometry,agentOrder
-import pickle
 
 def main():
 	args = docopt(__doc__)
