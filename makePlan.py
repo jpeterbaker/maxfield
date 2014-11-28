@@ -27,8 +27,21 @@ Description:
   output_file:
       name for a .pkl file containing information on the plan
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+      if you use this for the input file, the same plan will be produced with the
+      number of agents you specify (default: "lastPlan.pkl")
+
+Options:
+  -b         Make maps blue instead of green
+  -n agents  Number of agents [default: 1]
+
+"""
+
+import sys
+from docopt import docopt
+import networkx as nx
+from lib import maxfield,PlanPrinter,geometry,agentOrder
+import pickle
+
 args = sys.argv
 
 # We will take many samples in an attempt to reduce number of keys to farm
@@ -67,28 +80,6 @@ if len(args) < 3:
                  default: "lastPlan.pkl"
     '''
     exit()
-=======
-=======
->>>>>>> FETCH_HEAD
-      if you use this for the input file, the same plan will be produced with the
-      number of agents you specify (default: "lastPlan.pkl")
-
-Options:
-  -b         Make maps blue instead of green
-  -n agents  Number of agents [default: 1]
-
-"""
-
-import sys
-from docopt import docopt
-#<<<<<<< HEAD
-#>>>>>>> FETCH_HEAD
-#=======
-#>>>>>>> FETCH_HEAD
-
-import networkx as nx
-from lib import maxfield,PlanPrinter,geometry,agentOrder
-import pickle
 
 def main():
 	args = docopt(__doc__)
