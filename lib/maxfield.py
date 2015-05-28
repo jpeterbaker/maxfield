@@ -9,7 +9,7 @@ Some things are chosen randomly:
     Each triangle's "final node" (unless determined by parent)
 This is the number of times to randomly rebuild each first generation triangle while attempting to get it right
 '''
-TRIES_PER_TRI = 10
+TRIES_PER_TRI = 1
 
 def canFlip(degrees,keylacks,p,q):
     '''
@@ -40,6 +40,7 @@ def flipSome(a):
     '''
     Tries to make each in and out degree of a <=8 by reversing edges
     Only edges with the property reversible=True will be flipped
+    Secondarily, tries to reduce the number of keys that need to be farmed
     '''
     n = a.order()
     degrees  = np.empty([n,2],dtype=int)
@@ -51,6 +52,7 @@ def flipSome(a):
         degrees[i,1] = a.out_degree(i)
         keylacks[i] = degrees[i,0]-a.node[i]['keys']
 
+# This is commented out because plans are not submitted to this function without obeying the <8 outgoing rule
     # We can never make more than 8 outogoing links. Reducing these is first priority
 #    manyout = (degrees[:,1]>8).nonzero()[0]
 #    for p in manyout:
@@ -84,12 +86,15 @@ def removeSince(a,m,t):
     # Remove all but the first t Triangules from a.triangulation
     for i in xrange(len(a.edgeStack) - m):
         p,q = a.edgeStack.pop()
-        a.remove_edge(p,q)
+        try:
+            a.remove_edge(p,q)
+        except Exception:
+            # The only exception should be from the edge having been reversed
+            a.remove_edge(q,p)
 #        print 'removing',p,q
 #        print a.edgeStack
     while len(a.triangulation) > t:
         a.triangulation.pop()
-
 
 def triangulate(a,perim):
     '''
@@ -103,6 +108,7 @@ def triangulate(a,perim):
     '''
     pn = len(perim)
     if pn < 3:
+        # Base of recursion
         return True
 
     try:
@@ -116,34 +122,40 @@ def triangulate(a,perim):
         startTriLen = 0
         a.triangulation = []
 
-    # Try all triangles using perim[0:2] and another perim node
-    for i in np.random.permutation(range(2,pn)):
+#    odegrees = [a.out_degree(p) for p in perim
+#    order = np.argsort(odegrees)
 
+    # Try all possible first generation triangles with two edges on boundary that both use node i (using i as final vertex will cause no 2 first generation triangles to have same final vertex)
+    for i in np.random.permutation(range(0,pn)):
+#        print perim
+#        print 'using %s as final'%perim[i]
         for j in xrange(TRIES_PER_TRI):
-            t0 = Triangle(perim[[0,1,i]],a,True)
+            t0 = Triangle(perim[[i,i-1,(i+1)%pn]],a,True)
             t0.findContents()
-            t0.randSplit()
+#            t0.randSplit() # Split triangle on a random portal
+            t0.nearSplit() # Split triangle on the nearest portal
             try:
+#                print 'trying to build'
                 t0.buildGraph()
             except Deadend as d:
+                # TODO when allowing suboptimal plans, this block would be unnecessary if first generation triangles were made in the right order: see Triangle.buildGraph
                 # remove the links formed since beginning of loop
                 removeSince(a,startStackLen,startTriLen)
+#                print 'small fail'
             else:
                 # This build was successful. Break from the loop
+#                print 'build succeeded'
                 break
         else:
             # The loop ended "normally" so this triangle failed
+#            print 'big fail'
             continue
 
-        if not triangulate(a,perim[range(1,i   +1   )]): # 1 through i
+#        print 'continuing with',perim[range(i+1-pn,i)]
+        if not triangulate(a,perim[range(i+1-pn,i)]): # i+1 through i-1
             # remove the links formed since beginning of loop
             removeSince(a,startStackLen,startTriLen)
             continue
-
-        if not triangulate(a,perim[range(0,i-pn-1,-1)]): # i through 0
-           # remove the links formed since beginning of loop
-           removeSince(a,startStackLen,startTriLen)
-           continue
 
         # This will be a list of the first generation triangles
         a.triangulation.append(t0)

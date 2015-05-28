@@ -2,9 +2,24 @@
 import geometry
 np = geometry.np
 
+# Set to False if only perfectly optimal plans should be produced
+ALLOW_SUBOPTIMAL = True
+
 class Deadend(Exception):
     def __init__(self,s):
         self.explain = s
+
+def try_reduce_out_degree(a,p):
+    # Reverse as many edges out-edges of p as possible
+    toremove = []
+    for q in a.edge[p]:
+        if a.out_degree(q) < 8:
+            a.add_edge(q,p)
+            a.edge[q][p] = a.edge[p][q]
+            toremove.append(q)
+
+    for q in toremove:
+        a.remove_edge(p,q)
 
 def try_ordered_edge(a,p,q,reversible):
     if a.has_edge(p,q) or a.has_edge(q,p):
@@ -14,12 +29,21 @@ def try_ordered_edge(a,p,q,reversible):
 #        p,q = q,p
 
     if a.out_degree(p) >= 8:
-        if not reversible:
+        try_reduce_out_degree(a,p)
+
+    if a.out_degree(p) >= 8:
+    # We tried but failed to reduce the out-degree of p
+        if not reversible and not ALLOW_SUBOPTIMAL:
 #            print '%s already has 8 outgoing'%p
             raise(Deadend('%s already has 8 outgoing'%p))
+
         if a.out_degree(q) >= 8:
+            try_reduce_out_degree(a,q)
+
+        if a.out_degree(q) >= 8 and not ALLOW_SUBOPTIMAL:
 #            print '%s and %s already have 8 outgoing'%(p,q)
             raise(Deadend('%s and %s already have 8 outgoing'%(p,q)))
+
         p,q = q,p
     
     m = a.size()
@@ -45,13 +69,15 @@ class Triangle:
         self.a = a
         self.exterior = exterior
 
+        # This randomizes the Portal used for the jet link. I am experimenting with having maxfield.triangulate and Triangle.split choose this portal carefully, so don't randomize
+        '''
         if exterior:
             # Randomizing should help prevent perimeter nodes from getting too many links
             final = np.random.randint(3)
             tmp = self.verts[final]
             self.verts[final] = self.verts[0]
             self.verts[0] = tmp
-
+        '''
         self.pts = np.array([a.node[p]['xyz'] for p in verts])
         self.children = []
         self.contents = []
@@ -81,8 +107,8 @@ class Triangle:
         # Split on the node closest to final
         if len(self.contents) == 0:
             return
-        contentPts = np.array([self.a.node[p]['pos'] for p in self.contents])
-        displaces = contentPts - self.a.node[self.verts[0]]['pos']
+        contentPts = np.array([self.a.node[p]['xyz'] for p in self.contents])
+        displaces = contentPts - self.a.node[self.verts[0]]['xyz']
         dists = np.sum(displaces**2,1)
         closest = np.argmin(dists)
 
@@ -92,9 +118,12 @@ class Triangle:
             child.nearSplit()
 
     def splitOn(self,p):
+        # Splits this Triangle to produce 3 children using portal p
+        # p is passed as the first vertex parameter in the construction of 'opposite', so it will be opposite's 'final vertex' unless randomization is used
+
         # 'opposite' is the child that does not share the final vertex
         # Because of the build order, it's safe for this triangle to believe it is exterior
-        opposite  =  Triangle([self.verts[1],p,\
+        opposite  =  Triangle([p,self.verts[1],\
                                self.verts[2]],self.a,True)
         # The other two children must also use my final as their final
         adjacents = [\
@@ -150,7 +179,12 @@ class Triangle:
 
     def buildGraph(self):
 #        print 'building',self.tostr()
-        # A first generation triangle could have its final vertex's edges already completed by neighbors. This will cause the first generation to be completed when the opposite edge is added which complicates  completing inside descendents. This could be solved by choosing a new final vertex (or carefully choosing the order of completion of first generation triangles).
+        '''
+        TODO
+        A first generation triangle could have its final vertex's edges already completed by neighbors.
+        This will cause the first generation to be completed when the opposite edge is added which complicates completing inside descendants.
+        This could be solved by choosing a new final vertex (or carefully choosing the order of completion of first generation triangles).
+        '''
         if (                                                \
             self.a.has_edge(self.verts[0],self.verts[1]) or \
             self.a.has_edge(self.verts[1],self.verts[0])    \

@@ -2,12 +2,11 @@
 # Portals, triangles and the like
 
 import numpy as np
+from itertools import combinations
 
-radPERe6degree = np.pi / (180*10**6)
-
-def e6LLtoRads(pts):
+def LLtoRads(pts):
     pts = pts.astype(float)
-    pts *= radPERe6degree
+    pts *= np.pi / 180
     return pts
 
 def radstoxyz(pts,R=1):
@@ -118,10 +117,14 @@ def sphereTriContains(pts,x):
     # Check whether opposite vertex is always on same side of plane as x
     return np.all( xsign*psign > 0,0)
 
-def planeDist(x,y):
+def planeDist(x,y=None):
     x = x.reshape([-1,2])
-    y = y.reshape([-1,2])
+    if y == None:
+        y = x
+    else:
+        y = y.reshape([-1,2])
 
+    #TODO this is not a clever way of makeing the matrix
     return np.sqrt(np.array([ [sum( (a-b)**2 ) for a in y] for b in x ]))
 
 def makeLace(n):
@@ -136,7 +139,7 @@ def makeLace(n):
     return lace
 
 def rotate(x):
-    # rotate the vector(s) in a by one quarter turn counter-clockwise
+    # rotate the vector(s) in x by one quarter turn counter-clockwise
     if x.ndim == 1:
         x[[0,1]] = [-x[1],x[0]]
     else:
@@ -166,7 +169,7 @@ def gnomonicProj(pts,ptsxyz=None):
     # We'll us the triangle base - portal - North Pole
     # The angles at these vertices are, respectively A - B - C
     # The corresponding lowercase letter is arc-angle of the opposite edge
-    
+
     a = np.pi/2-pts[:,0]
     b = np.pi/2-base[0]
     c = greatArcAng(base,pts)
@@ -190,6 +193,9 @@ def gnomonicProj(pts,ptsxyz=None):
     return xy
 
 def between(a,b,pts):
+    # For use with gerperim
+    # Returns the index of a point in pts "left" of the ray a-b
+
     # diff will be orthogonal to the line through a,b
     diff = pts[a]-pts[b]
     rotate(diff)
@@ -292,20 +298,108 @@ def arc(a,b,c):
     
     return z,r,ta,tb,tc
 
+def orthplane(xyz):
+    '''
+    xyz should be a 3 x 3 numpy array
+    returns the vector orthogonal to the plane passing through the rows of xyz such that all( np.dot(xyz,p) > 0 )
+    '''
+    # treat xyz[0] as origin
+    a,b,c = tuple(xyz[1]-xyz[0])
+    d,e,f = tuple(xyz[2]-xyz[0])
+
+    # cross product of other shifted vectors
+    p = np.array( [b*f-c*e,
+                   c*d-a*f,    
+                   a*e-b*d])   
+           
+    return p/np.linalg.norm(p)
+
+def commonHemisphere(xyz,getDisproof=False):
+    '''
+    xyz should be an n x 3 numpy array with point coordinates
+    if it exists, returns (p,None)
+        p is a 3-vector such that all( np.dot(xyz,p) > 0 )
+        p is orthogonal to the plane through the points indexed by inds
+    otherwise, returns (None,inds)
+        inds are the indices of 4 non-co-hemispherical points
+        inds are None if getDisproof is False (since these take extra time to compute with this implementation)
+
+    the plane through the origin and orthogonal to p has all points of xyz on the same side
+    this defines a hemisphere appropriate for gnomic projection
+    '''
+    n = xyz.shape[0]
+    if n < 4:
+        if n == 0:
+            return (np.array([1,0,0]),None)
+        if n == 1:
+            return (xyz,None)
+        if n == 2:
+            return (np.mean(xyz,0),None)
+        if n == 3:
+            return (orthplane(xyz),None)
+
+    for tri in combinations(xyz,3):
+        p = orthplane(tri)
+        if np.all(np.dot(xyz,p) > 0):
+            print np.dot(xyz,p)
+            return (p,None)
+
+    if not getDisproof:
+        return (None,None)
+
+    range1_4 = range(1,4)
+    range4 = range(4)
+
+    for quad in combinations(range(n),4):
+        for j in range4:
+            noj = [ quad[j-i] for i in range1_4 ]
+            p = orthplane(xyz[noj])
+            if np.dot(xyz[quad[j]],p) > 0:
+                # The convex hull of these four don't contain the origin
+                break
+        else:
+            # The loop exited normally
+            # The current quad is a counter example
+            return (None,quad)
+
+    print xyz
+    print "We shouldn't be here"
 
 if __name__ == '__main__':
-    a = np.array([1., 1])
-    b = np.array([1.,-1])
-    c = np.array([3., 1])
+    # Test common hemisphere finder
 
-    z,r,ta,tb,tc = arc(a,b,c)
-    print z,r
-    print ta/np.pi
-    print tb/np.pi
-    print tc/np.pi
-    z,r,ta,tb,tc = arc(a,c,b)
-    print z,r
-    print ta/np.pi
-    print tb/np.pi
-    print tc/np.pi
+    import matplotlib.pyplot as plt
+    from mpl_toolkits.mplot3d import Axes3D
+
+    fig = plt.figure()
+    ax = fig.gca(projection='3d')
+
+#    xyz = np.random.randn(7,3)
+#    xyz = (xyz.T/norms(xyz)).T
+    xyz = np.array([[-0.30581918,-0.46686818,-0.82976426],
+                    [ 0.59465481, 0.19030562, 0.78113342],
+                    [ 0.8265863 ,-0.56278406,-0.00540285],
+                    [-0.50141151, 0.78501969, 0.36377271],
+                    [ 0.23231895, 0.90232697,-0.36308944],
+                    [-0.33705904,-0.56767828, 0.75108759],
+                    [-0.32538217, 0.94383169, 0.05751689]])
+#    p,pts = commonHemisphere(xyz,True)
+
+    ax.plot(xyz[:,0],xyz[:,1],xyz[:,2],'bo')
+
+#    if p == None:
+#        print 'disproof found'
+#        ax.plot([0,xyz[pts[0],0]],[0,xyz[pts[0],1]],[0,xyz[pts[0],2]],'bo-')
+#        ax.plot([0,xyz[pts[1],0]],[0,xyz[pts[1],1]],[0,xyz[pts[1],2]],'ko-')
+#        ax.plot([0,xyz[pts[2],0]],[0,xyz[pts[2],1]],[0,xyz[pts[2],2]],'go-')
+#        ax.plot([0,xyz[pts[3],0]],[0,xyz[pts[3],1]],[0,xyz[pts[3],2]],'ro-')
+#    else:
+#        print 'plane found'
+#        print np.dot(xyz,p)
+#        ax.plot([0,p[0]],[0,p[1]],[0,p[2]],'ko-')
+#        ax.plot([0],[0],[0],'r*')
+
+#    ax.plot(xyz[pts,0],xyz[pts,1],xyz[pts,2],'r*')
+        
+    plt.show()
 

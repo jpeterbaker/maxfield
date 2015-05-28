@@ -1,5 +1,5 @@
 
-# Sorry that this whole file is so messy. Input/output issues are tough to make tidy.
+# Sorry that this whole file is so messy. Input/output things are tough to make tidy.
 
 import matplotlib.pyplot as plt
 import geometry
@@ -266,6 +266,7 @@ class PlanPrinter:
                 p,q = self.orderedEdges[e]
                 newpos = self.a.node[p]['geo']
                 dist = geometry.sphereDist(curpos,newpos)
+#                print 'Agent %s walks %s to %s'%(i,dist,self.nslabel[p])
                 agentdists[i] += dist
                 curpos = newpos
 

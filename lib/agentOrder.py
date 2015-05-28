@@ -6,9 +6,11 @@ import orderedTSP
 
 # Walking speed in m/s
 WALKSPEED = 2
+
 # Seconds it takes to communicate link completion
-# Agents should report their consecutive links simultaneously
+# An agent should report their consecutive links simultaneously
 COMMTIME = 60
+
 # Seconds to create a link
 LINKTIME = 15
 

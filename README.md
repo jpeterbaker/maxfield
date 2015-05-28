@@ -71,10 +71,6 @@ This uses the plan stored in output.pkl instead of calculating a new one. It wil
 			* The default name is "lastPlan.pkl"
 			* In the examples above, this is called "output.pkl"
 
-# Warranty
-
-No promises
-
 # Usage
 
     python makePlan.py [-b] [-n agent_count] input_file [output_directory] [output_file]
@@ -84,13 +80,26 @@ No promises
     agent_count: Number of agents for which to make a plan
 
     input_file:  One of two types of files:
-        .csv   format:
-            portal name , latE6 , lngE6 [,keys]
+        .csv
+            a semicolon-delimited file
+            the actual file extension does not matter as long as it is not ".pkl"
 
-            portal name should not contain commas
-            latE6 and lngE6 should be the portal's global coordinates
-            E6 means times 10^6 (no decimal)
-                e.g. the Big Ben portal is at 51500775,-124466
+            2 acceptable formats:
+                
+                portal name ; lat ; lng [;keys]
+                OR
+                portal name ; Intel URL [;keys]
+
+                To get the Intel URL:
+                    * Click on the portal at ingress.com/intel
+                    * Click on "Link" near the top right of the screen
+                    * Copy and paste the URL from the box that appears
+                Example of an Intel URL:
+                    https://www.ingress.com/intel?ll=29.719016,-95.397893&z=19&pll=29.719011,-95.397881
+
+            portal name should not contain a semicolon
+            lat and lng should be the portal's global coordinates
+                e.g. the Big Ben portal is at 51.500775,-0.124466
             keys (optional parameter) is the number of keys you have for the portal
             If you leave this blank, the program assumes you have no keys
 
@@ -104,15 +113,14 @@ No promises
         if you later use this for the input file, the same plan will be
         produced with the number of agents you specify (default: "lastPlan.pkl")
 
+# Warranty
+
+No promises. In a future update, I will put license information and legalese here.
+
 # Notes
 
 The space of possible max-field plans is large. Rather than trying every
-possibility, this program randomly tries some plans and presents you with one
-that doesn't require you to obtain too many more keys.
-
-If you don't like the plan you got, run it again. You'll probably get a
-different plan.
-
+possibility, this program randomly tries some plans and presents you with one.
 
 [0]: https://www.youtube.com/watch?v=priezq6Dm4Y
 [1]: https://www.enthought.com/downloads/
