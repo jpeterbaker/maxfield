@@ -9,6 +9,7 @@ np = geometry.np
 import agentOrder
 import networkx as nx
 import electricSpring
+import time
 
 # returns the points in a shrunken toward their centroid
 def shrink(a):
@@ -71,7 +72,8 @@ class PlanPrinter:
     def keyPrep(self):
         rowFormat = '{0:11d} | {1:6d} | {2}\n'
         with open(self.outputDir+'keyPrep.txt','w') as fout:
-            fout.write( 'Keys Needed | Lacked |\n')
+            fout.write( 'Keys Needed | Lacked |                                  %s\n'\
+                %time.strftime('%Y-%m-%d %H:%M:%S %Z'))
             for i in self.nameOrder:
                 keylack = max(self.a.in_degree(i)-self.a.node[i]['keys'],0)
                 fout.write(rowFormat.format(\
@@ -96,7 +98,8 @@ class PlanPrinter:
         outfirst.sort()
 
         with open(self.outputDir+'ownershipPrep.txt','w') as fout:
-            fout.write("These portals' first links are incoming\n")
+            fout.write("These portals' first links are incoming                 %s\n"\
+                %time.strftime('%Y-%m-%d %H:%M:%S %Z'))
             fout.write('They should be at full resonators before linking\n')
             for s in infirst:
                 fout.write('  %s\n'%s)
@@ -112,7 +115,8 @@ class PlanPrinter:
         for agent in range(self.nagents):
             with open(self.outputDir+'keys_for_agent_%s_of_%s.txt'\
                     %(agent+1,self.nagents),'w') as fout:
-                fout.write('Keys for Agent %s of %s\n\n'%(agent+1,self.nagents))
+                fout.write('Keys for Agent %s of %s                                   %s\n\n'\
+                    %(agent+1,self.nagents, time.strftime('%Y-%m-%d %H:%M:%S %Z')))
                 fout.write('Map# Keys Name\n')
 
                 for portal in self.nameOrder:
@@ -285,8 +289,8 @@ class PlanPrinter:
             with open(self.outputDir+'links_for_agent_%s_of_%s.txt'\
                     %(agent+1,self.nagents),'w') as fout:
 
-                fout.write('Complete link schedule issued to agent %s of %s\n'\
-                    %(agent+1,self.nagents))
+                fout.write('Complete link schedule issued to agent %s of %s           %s\n\n'\
+                    %(agent+1,self.nagents,time.strftime('%Y-%m-%d %H:%M:%S %Z')))
                 fout.write('\nLinks marked with * can be made EARLY\n')
                 
                 agentAP = 313*agentlinkcount[agent] + 1250*agentfieldcount[agent]
