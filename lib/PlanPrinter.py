@@ -263,6 +263,8 @@ class PlanPrinter:
         # Total number of links, fields for each agent
         agentlinkcount  = [0]*self.nagents
         agentfieldcount = [0]*self.nagents
+        totalAP         = 0
+        totalDist       = 0
 
         for i in range(self.nagents):
             movie = self.movements[i]
@@ -278,6 +280,9 @@ class PlanPrinter:
 
                 agentlinkcount[i] += 1
                 agentfieldcount[i] += len(self.a.edge[p][q]['fields'])
+                totalAP += 313
+                totalAP += 1250 * len(self.a.edge[p][q]['fields'])
+                totalDist += dist
 
         # Different formatting for the agent's own links
         plainStr = '{0:4d}{1:1s} {2: 5d}{3:5d} {4:s}\n            {5:4d} {6:s}\n\n'
@@ -293,15 +298,20 @@ class PlanPrinter:
                     %(agent+1,self.nagents,time.strftime('%Y-%m-%d %H:%M:%S %Z')))
                 fout.write('\nLinks marked with * can be made EARLY\n')
                 
+                fout.write('----------- PLAN DATA ------------\n')
+                fout.write('Minutes:                 %s minutes\n'%int(totalTime/60+.5))
+                fout.write('Total Distance:          %s meter\n'%int(totalDist))
+                fout.write('Total AP:                %s\n'%totalAP)
+                fout.write('AP per Agent per minute: %0.2f AP/Agent/min\n'%float(totalAP/self.nagents/(totalTime/60+.5)))
+                fout.write('AP per Agent per meter:  %0.2f AP/Agent/m\n'%float(totalAP/self.nagents/totalDist))
+
                 agentAP = 313*agentlinkcount[agent] + 1250*agentfieldcount[agent]
 
-                fout.write('\nTotal time estimate: %s minutes\n\n'%int(totalTime/60+.5))
-
                 fout.write('----------- AGENT DATA -----------\n')
-                fout.write('Distance traveled: %s m\n'%int(agentdists[agent]))
+                fout.write('Distance traveled: %s m (%s %%)\n'%(int(agentdists[agent]),int(100*agentdists[agent]/totalDist)))
                 fout.write('Links made:        %s\n'%(agentlinkcount[agent]))
                 fout.write('Fields completed:  %s\n'%(agentfieldcount[agent]))
-                fout.write('Total experience:  %s AP\n'%(agentAP))
+                fout.write('Total experience:  %s AP (%s %%)\n'%(agentAP,int(100*agentAP/totalAP)))
 
 
                 fout.write('----------------------------------\n')
