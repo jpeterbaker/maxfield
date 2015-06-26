@@ -1,6 +1,8 @@
 
 # Sorry that this whole file is so messy. Input/output things are tough to make tidy.
 
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import geometry
 np = geometry.np
