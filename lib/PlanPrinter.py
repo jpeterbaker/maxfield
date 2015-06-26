@@ -285,7 +285,8 @@ class PlanPrinter:
                 totalDist += dist
 
         # Different formatting for the agent's own links
-        plainStr = '{0:4d}{1:1s} {2: 5d}{3:5d} {4:s}\n            {5:4d} {6:s}\n\n'
+#        plainStr = '{0:4d}{1:1s} {2: 5d}{3:5d} {4:s}\n            {5:4d} {6:s}\n\n'
+        plainStr = '{0:4d}{1:1s} {2: 2d}{3:4d} {4:s} -> {5:d} {6:s}\n'
         hilitStr = '{0:4d}{1:1s} {2:_>5d}{3:5d} {4:s}\n            {5:4d} {6:s}\n\n'
         
         totalTime = self.a.walktime+self.a.linktime+self.a.commtime
@@ -320,6 +321,7 @@ class PlanPrinter:
                 fout.write('----------------------------------\n')
                 #             1234112345612345 name
                 
+                last_link_from_other_agent = 0
                 for i in xrange(self.m):
                     p,q = self.orderedEdges[i]
                     
@@ -346,7 +348,11 @@ class PlanPrinter:
                             self.nslabel[q],\
                             self.names[q]\
                         ))
+                        last_link_from_other_agent = 1
                     else:
+                        if last_link_from_other_agent:
+                            fout.write('\n')
+                        last_link_from_other_agent = 0
                         fout.write(hilitStr.format(\
                             i,\
                             star,\
