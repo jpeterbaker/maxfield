@@ -1,39 +1,24 @@
 #! /usr/bin/env python
-"""
-Usage:
-  makePlan.py [-b] [-n <agent_count>] <input_file> [<output_directory>] [<output_file>]
+'''
+This file is part of Maxfield.
+Maxfield is a planning tool for helping Ingress players to determine
+an efficient plan to create many in-game fields.
 
-Description:
-  This is for Ingress. If you don't know what that is, you're lost.
+Copyright (C) 2015 by Jonathan Baker: babamots@gmail.com
 
-  input_file:
-      One of two types of files:
+Maxfield is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
 
-      - .csv formatted as portal name,lat,lng,keys
+Maxfield is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 
-          portal name should not contain commas
-          lat and lng should be the portal's global coordinates
-              e.g. the Big Ben portal is at 51.500775,-0.124466
-          keys is the number of keys you have for the portal
-
-      - .pkl an output from a previous run of this program
-
-          this can be used to make the same plan with a different number of agents
-
-  output_directory:
-      directory in which to put all output (default is the working directory)
-
-  output_file:
-      name for a .pkl file containing information on the plan
-
-      if you use this for the input file, the same plan will be produced with the
-      number of agents you specify (default: "lastPlan.pkl")
-
-Options:
-  -b         Make maps blue instead of green
-  -n agents  Number of agents [default: 1]
-
-"""
+You should have received a copy of the GNU General Public License
+along with Maxfield.  If not, see <http://www.gnu.org/licenses/>.
+'''
 
 import re
 import sys
@@ -44,42 +29,48 @@ import pickle
 
 args = sys.argv
 
-
 # We could take many samples in an attempt to reduce number of keys to farm
 # This is the number of samples to take since the last improvement
 EXTRA_SAMPLES = 1
 
-if len(args) < 3:
-    print '''
-    -----Introduction-----
+copystr = 'Maxfield Copyright (C) 2015 Jonathan Baker: babamots@gmail.com'
+print copystr
 
-    This is for Ingress. If you don't know what that is, you're lost.
+__doc__ = '''
+Usage:
+  makePlan.py [-b] [-n <agent_count>] <input_file> [<output_directory>] [<output_file>]
 
-    -----Usage-----
+Description:
 
-    >> python makePlan.py agent_count input_file [output_directory] [output_file]
-    
-    agent_count: Number of agents for which to make a plan
-    
-    input_file:  One of two types of files:
-                   .csv formatted as portal name,latE6,lngE6,keys
-                        
-                        portal name should not contain commas
-                        lat and lng should be the portal's global coordinates
-                            e.g. the Big Ben portal is at 51.500775,-0.124466
-                        keys is the number of keys you have for the portal
-                   
-                   .pkl an output from a previous run of this program
-                        this can be used to make the same plan with a different number of agents
+  input_file:
+      One of two types of files:
+      - .csv formatted as
+        
+            portal name ; lat ; lng [; keys]
+               OR
+            portal name ; Intel map URL [;keys]
 
-    output_directory: directory in which to put all output
-                      default is the working directory
+      - .pkl an output from a previous run of this program
+          this can be used to make the same plan with a different number of agents
 
-    output_file: name for a .pkl file containing information on the plan
-                 if you use this for the input file, the same plan will be produced with the number of agents you specify
-                 default: "lastPlan.pkl"
-    '''
-    exit()
+  output_directory:
+      directory in which to put all output (default is the working directory)
+
+  output_file:
+      name for a .pkl file containing information on the plan
+      if you use this for the input file, the same plan will be produced with the
+      number of agents you specify (default: "lastPlan.pkl")
+
+Options:
+  -b         Make maps blue instead of green
+  -n agents  Number of agents [default: 1]
+'''
+
+#if len(args) < 3:
+#    print helpstr
+#    exit()
+
+#print __doc__
 
 def main():
     args = docopt(__doc__)
@@ -133,8 +124,7 @@ def main():
                 if m == None:
                     m = cvspat.match(line)
                 if m == None:
-                # TODO allow other line formats
-                    break
+                    continue
                 g = m.groups()
 #                print g
 
