@@ -1,4 +1,11 @@
 
+'''
+This file is part of Maxfield.
+Copyright (C) 2015 by Jonathan Baker: babamots@gmail.com
+GNU Public License
+http://www.gnu.org/licenses/
+'''
+
 # Sorry that this whole file is so messy. Input/output things are tough to make tidy.
 
 import matplotlib
@@ -100,11 +107,11 @@ class PlanPrinter:
         with open(self.outputDir+'ownershipPrep.txt','w') as fout:
             fout.write("These portals' first links are incoming                 %s\n"\
                 %time.strftime('%Y-%m-%d %H:%M:%S %Z'))
-            fout.write('They should be at full resonators before linking\n')
+            fout.write('They should be at full resonators before linking\n\n')
             for s in infirst:
                 fout.write('  %s\n'%s)
 
-            fout.write("\nThese portals' first links are outgoing\n")
+            fout.write("\nThese portals' first links are outgoing\n\n")
             fout.write('Their resonators can be applied when first agent arrives\n')
             for s in outfirst:
                 fout.write('  %s\n'%s)
@@ -286,7 +293,7 @@ class PlanPrinter:
 
         # Different formatting for the agent's own links
 #        plainStr = '{0:4d}{1:1s} {2: 5d}{3:5d} {4:s}\n            {5:4d} {6:s}\n\n'
-        plainStr = '{0:4d}{1:1s} {2: 2d}{3:4d} {4:s} -> {5:d} {6:s}\n'
+        plainStr = '{0:4d}{1:1s} {2: 5d}{3:5d} {4:s} -> {5:d} {6:s}\n'
         hilitStr = '{0:4d}{1:1s} {2:_>5d}{3:5d} {4:s}\n            {5:4d} {6:s}\n\n'
         
         totalTime = self.a.walktime+self.a.linktime+self.a.commtime

@@ -1,3 +1,9 @@
+'''
+This file is part of Maxfield.
+Copyright (C) 2015 by Jonathan Baker: babamots@gmail.com
+GNU Public License
+http://www.gnu.org/licenses/
+'''
 
 import numpy as np
 

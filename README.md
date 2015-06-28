@@ -1,7 +1,5 @@
 # Introduction
 
-This is for Ingress. If you don't know what that is, you're lost.
-
 This code is designed to make a plan for linking a given set of portals in the
 way (and the order) that creates the most fields. This is harder than it sounds.
 If you're working on more than a dozen portals, learning to use this code may
@@ -84,7 +82,7 @@ This uses the plan stored in output.pkl instead of calculating a new one. It wil
             a semicolon-delimited file
             the actual file extension does not matter as long as it is not ".pkl"
 
-            2 acceptable formats:
+            two acceptable formats:
                 
                 portal name ; lat ; lng [;keys]
                 OR
@@ -113,9 +111,23 @@ This uses the plan stored in output.pkl instead of calculating a new one. It wil
         if you later use this for the input file, the same plan will be
         produced with the number of agents you specify (default: "lastPlan.pkl")
 
-# Warranty
+# Warranty and Copyright
 
-No promises. In a future update, I will put license information and legalese here.
+Copyright (C) 2015 by Jonathan Baker: babamots@gmail.com
+
+Maxfield is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Maxfield is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Maxfield in a file called COPYING.txt. If not, see
+<http://www.gnu.org/licenses/>.
 
 # Notes
 
@@ -126,3 +138,4 @@ possibility, this program randomly tries some plans and presents you with one.
 [1]: https://www.enthought.com/downloads/
 [2]: https://www.python.org/download/releases/2.7
 [3]: https://pypi.python.org/pypi/pip
+
