@@ -22,13 +22,13 @@ You can use [pip][3] to install the dependencies via:
 
 I'll be distributing this code with a file EXAMPLE.csv. Try running
 
-    python makePlan.py -n 4 EXAMPLE.csv output/ output.pkl
+    python maxfield.py -n 4 EXAMPLE.csv output/ output.pkl
 
 This will put a bunch of files into the "output/" directory (see OUTPUT FILE LIST)
 
 Now try running
 
-    python makePlan.py -n 3 output/output.pkl
+    python maxfield.py -n 3 output/output.pkl
 
 This uses the plan stored in output.pkl instead of calculating a new one. It will create files for 3 agents instead of 4.
 
