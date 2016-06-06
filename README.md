@@ -71,7 +71,7 @@ This uses the plan stored in output.pkl instead of calculating a new one. It wil
 
 # Usage
 
-    python makePlan.py [-b] [-n agent_count] input_file [output_directory] [output_file]
+    python maxfield.py [-b] [-n agent_count] input_file [output_directory] [output_file]
 
     -b:          Include this option if you like your maps blue instead of green for any reason
 
