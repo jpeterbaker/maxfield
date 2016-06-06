@@ -1,10 +1,24 @@
 '''
 This file is part of Maxfield.
-Copyright (C) 2015 by Jonathan Baker: babamots@gmail.com
-GNU Public License
-http://www.gnu.org/licenses/
-'''
+Maxfield is a planning tool for helping Ingress players to determine
+an efficient plan to create many in-game fields.
 
+Copyright (C) 2015 by Jonathan Baker: babamots@gmail.com
+
+
+Maxfield is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Maxfield is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Maxfield.  If not, see <http://www.gnu.org/licenses/>.
+'''
 # Portals, triangles and the like
 
 import numpy as np
@@ -125,7 +139,7 @@ def sphereTriContains(pts,x):
 
 def planeDist(x,y=None):
     x = x.reshape([-1,2])
-    if y == None:
+    if y is None:
         y = x
     else:
         y = y.reshape([-1,2])
@@ -163,7 +177,7 @@ def gnomonicProj(pts,ptsxyz=None):
     This is only guaranteed to work if no two points are more than 90 degrees apart (great arcwise)
     This is about 9700 km across the surface of Earth
     '''
-    if ptsxyz == None:
+    if ptsxyz is None:
         ptsxyz = radstoxyz(pts)
 
     # We'll project onto the plane tangent at base
@@ -235,7 +249,7 @@ def getPerim(pts):
 
     while a != hix or aNeverChanged:
         c = between(a,b,pts)
-        if c == None:
+        if c is None:
             # there is no perimeter point between a and b
             # proceed to the next adjacent pair
             perimlist.append(a)
@@ -393,7 +407,7 @@ if __name__ == '__main__':
 
     ax.plot(xyz[:,0],xyz[:,1],xyz[:,2],'bo')
 
-#    if p == None:
+#    if p is None:
 #        print 'disproof found'
 #        ax.plot([0,xyz[pts[0],0]],[0,xyz[pts[0],1]],[0,xyz[pts[0],2]],'bo-')
 #        ax.plot([0,xyz[pts[1],0]],[0,xyz[pts[1],1]],[0,xyz[pts[1],2]],'ko-')

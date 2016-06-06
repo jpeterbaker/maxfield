@@ -1,9 +1,23 @@
-
 '''
 This file is part of Maxfield.
+Maxfield is a planning tool for helping Ingress players to determine
+an efficient plan to create many in-game fields.
+
 Copyright (C) 2015 by Jonathan Baker: babamots@gmail.com
-GNU Public License
-http://www.gnu.org/licenses/
+
+
+Maxfield is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Maxfield is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Maxfield.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
 # Sorry that this whole file is so messy. Input/output things are tough to make tidy.
@@ -151,7 +165,7 @@ class PlanPrinter:
         Only includes the edges in 'edges'
         Default is all edges
         '''
-        if edges == None:
+        if edges is None:
             edges = range(self.m)
 
 #        anchors = np.array([ self.xy[self.orderedEdges[e],:] for e in edges]).mean(1)
@@ -169,7 +183,7 @@ class PlanPrinter:
 #                     ha='center',va='center')
 
 ### The code below works. It just uses networkx draw functions
-        if edges == None:
+        if edges is None:
             b = self.a
         else:
             b = nx.DiGraph()
@@ -277,6 +291,7 @@ class PlanPrinter:
             movie = self.movements[i]
             # first portal in first link
             curpos = self.a.node[self.orderedEdges[movie[0]][0]]['geo']
+            agentlinkcount[i] = len(movie)
             for e in movie[1:]:
                 p,q = self.orderedEdges[e]
                 newpos = self.a.node[p]['geo']
@@ -285,7 +300,6 @@ class PlanPrinter:
                 agentdists[i] += dist
                 curpos = newpos
 
-                agentlinkcount[i] += 1
                 agentfieldcount[i] += len(self.a.edge[p][q]['fields'])
                 totalAP += 313
                 totalAP += 1250 * len(self.a.edge[p][q]['fields'])

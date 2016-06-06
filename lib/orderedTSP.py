@@ -1,11 +1,25 @@
 '''
 This file is part of Maxfield.
-Copyright (C) 2015 by Jonathan Baker: babamots@gmail.com
-GNU Public License
-http://www.gnu.org/licenses/
-'''
+Maxfield is a planning tool for helping Ingress players to determine
+an efficient plan to create many in-game fields.
 
-import sys
+Copyright (C) 2015 by Jonathan Baker: babamots@gmail.com
+
+
+Maxfield is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Maxfield is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Maxfield.  If not, see <http://www.gnu.org/licenses/>.
+'''
+from sys import stdout
 import branch_bound
 np = branch_bound.np
 
@@ -26,7 +40,7 @@ class OTSPstate:
         '''
 
         # This is the root
-        if lastat == None:
+        if lastat is None:
             self.n = d.shape[0]
 
             lastat = [[None]*nagents]
@@ -62,7 +76,7 @@ class OTSPstate:
 #        print '  lastvisit',lastvisit
 
         # Assume agent's initial deployment is instantaneous
-        if lastvisit == None:
+        if lastvisit is None:
             return self.time[-1]
 
         # The node at which agent made his last visit
@@ -172,7 +186,7 @@ def getVisits(dists,order,nagents):
     def cb():
         c[0] += 1
         print c[0],
-        sys.stdout.flush()
+        stdout.flush()
 
     root = OTSPstate(dists,order,nagents)
     LO = MAX_BRANCHES // nagents

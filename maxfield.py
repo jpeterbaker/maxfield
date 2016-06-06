@@ -24,7 +24,7 @@ import re
 import sys
 from docopt import docopt
 import networkx as nx
-from lib import maxfield,PlanPrinter,geometry,agentOrder
+from lib import makeFields,PlanPrinter,geometry,agentOrder
 import pickle
 
 args = sys.argv
@@ -38,7 +38,7 @@ print copystr
 
 __doc__ = '''
 Usage:
-  makePlan.py [-b] [-n <agent_count>] <input_file> [<output_directory>] [<output_file>]
+  maxfield.py [-b] [-n <agent_count>] <input_file> [<output_directory>] [<output_file>]
 
 Description:
 
@@ -89,13 +89,13 @@ def main():
         COLOR = BLUE
 
     output_directory = ''
-    if args['<output_directory>'] != None:
+    if not args['<output_directory>'] is None:
         output_directory = args['<output_directory>']
         if output_directory[-1] != '/':
             output_directory += '/'
 
     output_file = 'lastPlan.pkl'
-    if args['<output_file>'] != None:
+    if not args['<output_file>'] is None:
         output_file = args['<output_file>']
         if not output_file[-3:] == 'pkl':
             print 'WARNING: output file should end in "pkl" or you cannot use it as input later'
@@ -121,9 +121,9 @@ def main():
         with open(input_file,'r') as fin:
             for line in fin:
                 m = urlpat.match(line)
-                if m == None:
+                if m is None:
                     m = cvspat.match(line)
-                if m == None:
+                if m is None:
                     continue
                 g = m.groups()
 #                print g
@@ -133,7 +133,7 @@ def main():
 
                 locs.append( np.array([float(g[1]),float(g[2])] ))
 
-                if g[3] == None:
+                if g[3] is None:
                     a.node[i]['keys'] = 0
                 else:
                     a.node[i]['keys'] = int(g[3])
@@ -155,7 +155,7 @@ def main():
             a.node[i]['xyz'] = xyz [i]
             a.node[i]['xy' ] = xy  [i]
             
-        maxfield.maxFields(a)
+        makeFields.maxFields(a)
 
         '''
         # EXTRA_SAMPLES attempts to get graph with few missing keys
@@ -174,7 +174,7 @@ def main():
 
             sinceImprove += 1
 
-            if not maxfield.maxFields(b):
+            if not makeFields.maxFields(b):
                 print 'Randomization failure\nThe program may work if you try again. It is more likely to work if you remove some protals.'
                 continue
 
@@ -212,7 +212,7 @@ def main():
 #                break
 #            print '%s tries since improvement'%sinceImprove
 
-        if bestgraph == None:
+        if bestgraph is None:
             print 'EXITING RANDOMIZATION LOOP WITHOUT SOLUTION!'
             print ''
             exit()
