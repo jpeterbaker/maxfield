@@ -110,13 +110,9 @@ This uses the plan stored in output.pkl instead of calculating a new one. It wil
         if you later use this for the input file, the same plan will be
         produced with the number of agents you specify (default: "lastPlan.pkl")
 
-<<<<<<< Updated upstream
 # Warranty and Copyright
 
 Copyright (C) 2015 by Jonathan Baker: babamots@gmail.com
-=======
-# Copyright and Warranty
->>>>>>> Stashed changes
 
 Maxfield is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -127,13 +123,10 @@ Maxfield is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
-<<<<<<< Updated upstream
 
 You should have received a copy of the GNU General Public License
 along with Maxfield in a file called COPYING.txt. If not, see
 <http://www.gnu.org/licenses/>.
-=======
->>>>>>> Stashed changes
 
 # Notes
 
